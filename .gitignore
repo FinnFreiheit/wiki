@@ -1,7 +1,6 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
-.bundle/
-Gemfile.lock
+site/
+.venv/
+__pycache__/
+*.pyc
+leitfaden_erv.txt
+leitfaden_erv_pdf.pdf
