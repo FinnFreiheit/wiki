@@ -1,0 +1,2506 @@
+Elektronischer Rechtsverkehr mit der
+Justiz
+Leitfaden
+
+Arbeitsgruppe „IT-Standards in der Justiz“ der
+Bund-Länder-Kommission für Informationstechnik in der Justiz
+Version 1.6, Stand 28.07.2025
+
+1
+
+Änderungshistorie
+Version
+
+Datum
+
+Änderung
+
+1.2
+
+02.12.2022
+
+Neues Kapitel 8.4 Zentrales Vollstreckungsgericht
+
+1.3
+
+30.08.2024
+
+1.4
+
+20.02.2025
+
+1.5
+
+24.04.2025
+
+1.6
+
+22.07.2025
+
+Ergänzende Erläuterungen zum Anschreiben, Aufnahme „Prüfvermerk“
+als neuer Wert der Codeliste Bestandteiltyp, Zusammenführung mit
+dem Leitfaden für Bußgeldbehörden, Konkretisierung der Vorgaben für
+die Weiterleitung von Nachrichten (Kapitel 6.5)
+Anpassung sichere Übermittlungswege,
+redaktionelle Änderungen für Bußgeldverfahren (Anlage 9.2),
+Aufnahme des weiteren Kommunikationsanlasses für Bußgeldverfahren
+(Kapitel 8.2.1): Aktenzeichenmitteilung von Behörde an Justiz, Ausführung zur verpflichtenden Übermittlung von strukturierten Daten in Bußgeldverfahren (Kapitel 9.2.7.1), Ergänzung Zwangsvollstreckungssachen
+(Kapitel 8.7)
+Anpassungen und Ergänzungen der Kommunikationsanlässe in Bußgeldverfahren, Kapitel 8.2.1 und 8.2.2
+Klarstellung zu den Dateiformaten, die im ERV eingereicht werden können, Aktualisierung Behördenaktenübermittlungsverordnung, Ergänzungen eBO-plus
+
+Inhalt
+1
+
+Zielsetzung ..................................................................................................................................... 5
+
+2
+
+Rechtliche Rahmenbedingungen ................................................................................................... 6
+
+3
+
+Das Grundprinzip ........................................................................................................................... 7
+
+4
+
+Übermittlung der Nachrichten ....................................................................................................... 8
+
+5
+
+4.1
+
+Beteiligte Kommunikationspartner ....................................................................................... 8
+
+4.2
+
+Adressierung.......................................................................................................................... 9
+
+4.3
+
+Authentifizierung des Absenders ........................................................................................ 10
+
+4.4
+
+Nachweise zum Versand und Empfang ............................................................................... 10
+
+4.4.1
+
+Eingangszeitpunkt ........................................................................................................... 10
+
+4.4.2
+
+Prüfergebnisse für empfangene Nachrichten ................................................................. 11
+
+4.4.3
+
+Nachweis für versendete Nachrichten ............................................................................ 11
+
+4.5
+
+Größe der EGVP-Nachrichten und Anzahl der Anlagen ....................................................... 12
+
+4.6
+
+Kennzeichnung eiliger Nachrichten ..................................................................................... 12
+
+4.7
+
+Übermittlung von Verschlusssachen ................................................................................... 13
+
+Inhalt der Nachrichten ................................................................................................................. 14
+5.1
+
+Strukturierter maschinenlesbarer Datensatz ...................................................................... 14
+
+5.2
+
+Vorgaben für die Dateinamen ............................................................................................. 15
+2
+
+6
+
+7
+
+5.3
+
+Anforderungen an die Dokumente...................................................................................... 16
+
+5.4
+
+Anforderungen bei der Übersendung von Akten ................................................................ 18
+
+5.4.1
+
+Struktur der Akte............................................................................................................. 18
+
+5.4.2
+
+Paginierungsinformationen der Akten ............................................................................ 19
+
+Weiterverarbeitung der von der Justiz übermittelten Nachrichten............................................. 20
+6.1
+
+Übernahme in E-Aktensysteme oder Fachverfahren der Empfänger ................................. 20
+
+6.2
+
+Übernahme in die Papierakte.............................................................................................. 20
+
+6.3
+
+Übermittlung der Dokumente an Dritte .............................................................................. 21
+
+6.4
+
+Verteilung der Nachrichten innerhalb des eigenen Verantwortungsbereichs .................... 21
+
+6.5
+
+Weiterleitung von Nachrichten ........................................................................................... 21
+
+6.5.1
+
+Anlagen der Weiterleitungsnachricht ............................................................................. 22
+
+6.5.2
+
+Dateinamen ..................................................................................................................... 22
+
+6.5.3
+
+XJustiz-Nachricht für die Weiterleitungsnachricht .......................................................... 24
+
+XJustiz........................................................................................................................................... 25
+7.1
+7.1.1
+
+XJustiz-Nachricht „uebermittlungSchriftgutobjekte“ .......................................................... 26
+Wie können Daten innerhalb einer XJustiz-Nachricht verknüpft werden? ..................... 27
+
+7.1.2 Wie können XJustiz-Nachrichten beim Empfänger den richtigen Vorgängen/Beteiligten
+zugeordnet werden? .................................................................................................................... 28
+7.2
+
+XJustiz-Nachricht „rücklaufendes eEB“ ............................................................................... 28
+
+7.2.1
+
+Der Zustellungsempfänger gibt das eEB ab..................................................................... 29
+
+7.2.2
+
+Ein abweichender Zustellungsempfänger gibt das eEB ab (bei Behörde o.ä.) ................ 30
+
+7.2.3
+
+Ein abweichender Zustellungsempfänger gibt das eEB als Vertreter ab......................... 30
+
+7.2.4
+
+Das eEB wird nicht abgegeben: ....................................................................................... 31
+
+7.3
+
+Austausch von Schriftgutobjekten ...................................................................................... 31
+
+7.3.1
+
+Wie wird das Anschreiben gekennzeichnet? .................................................................. 33
+
+7.3.2
+
+Wie wird die Reihenfolge der übermittelten Dokumente gekennzeichnet? .................. 34
+
+7.3.3
+
+Wie können Akteninhalte zitiert werden? ...................................................................... 35
+
+7.3.4 Wie wird gekennzeichnet, dass es sich bei einem Dokument um ein Scanprodukt
+handelt? ....................................................................................................................................... 35
+7.3.5
+
+Wie wird gekennzeichnet, dass mehrere Dateien zusammen ein Dokument bilden?.... 36
+
+7.3.6 Wie wird ein fachlicher Zusammenhang zwischen mehreren Dokumenten
+gekennzeichnet? .......................................................................................................................... 37
+7.3.7
+8
+
+Wie kann erkannt werden, dass ein Dokument bereits übermittelt wurde? ................. 37
+
+Fachspezifische Kommunikationsszenarien ................................................................................. 38
+8.1
+
+Mahnverfahren.................................................................................................................... 38
+
+8.2
+
+Bußgeldverfahren ................................................................................................................ 38
+3
+
+9
+
+8.2.1
+
+Kommunikation von der Bußgeldbehörde zur Justiz ...................................................... 39
+
+8.2.2
+
+Kommunikation von der Justiz zur Bußgeldbehörde ...................................................... 42
+
+8.3
+
+Handels-, Genossenschafts- und Partnerschaftsregistersachen ......................................... 43
+
+8.4
+
+Zentrales Schutzschriftenregister ........................................................................................ 43
+
+8.5
+
+Zentrales Vollstreckungsgericht .......................................................................................... 44
+
+8.6
+
+Schiffsregistersachen ........................................................................................................... 44
+
+8.7
+
+Zwangsvollstreckung ........................................................................................................... 44
+
+Anlagen ........................................................................................................................................ 46
+9.1
+
+Beschreibung der Inhalte der XJustiz-Nachrichten (Profilierung) ....................................... 46
+
+9.2
+
+Bußgeldverfahren, fachliche Rahmenbedingungen ............................................................ 46
+
+9.2.1
+
+Ausgangslage................................................................................................................... 46
+
+9.2.2
+
+Aktenführung und Erstellung elektronischer Dokumente durch die Bußgeldbehörde... 47
+
+9.2.3 Umgang mit elektronischen Eingängen im besonderen Behördenpostfach (beBPo) der
+Bußgeldbehörde........................................................................................................................... 49
+9.2.4
+
+Umgang mit Papiereingängen Dritter (Scan-Anforderungen)......................................... 52
+
+9.2.5
+
+Umgang mit Papierdokumenten, die die Bußgeldbehörde selbst erstellt ...................... 55
+
+9.2.6
+
+Gewährung von Akteneinsicht in eine elektronisch geführte Akte................................. 55
+
+9.2.7
+
+Übertragung an die Justiz................................................................................................ 57
+
+9.2.8
+
+Datenschutz und Löschfristen ......................................................................................... 60
+
+4
+
+1
+
+Zielsetzung
+
+Der elektronische Rechtsverkehr (ERV) ermöglicht den Bürgern1, den Behörden, den Organisationen
+(juristische Personen, Gesellschaften und nichtrechtsfähige Vereinigungen) sowie den professionellen Einreichern wie den Rechtsanwälten, den Notaren, den Steuerberatern und den Gerichtsvollziehern den sicheren und rechtlich wirksamen Austausch elektronischer Dokumente und Akten mit der
+Justiz. Diese Kommunikationsform ersetzt die bisherige, zumeist papiergebundene Kommunikation,
+aber auch Tele- und Computerfax.
+Im vorliegenden Leitfaden sind die technischen Rahmenbedingungen für den ERV zwischen Personen
+oder Organisationen, die an den Verfahren beteiligt sind, und den Gerichten der ordentlichen Gerichtsbarkeit, Sozial-, Verwaltungs-, Arbeits-, und Finanzgerichtsbarkeit sowie den Staatsanwaltschaften beschrieben.
+Der Leitfaden gilt darüber hinaus auch für den ERV zwischen Bußgeldbehörden und der Justiz.
+Unter elektronischem Rechtsverkehr wird dabei der Austausch von elektronischen Dokumenten und
+Akten verstanden. Die Führung der Akten ist nicht Gegenstand dieses Leitfadens.
+Der Austausch von Dokumenten und Akten zwischen Gerichten oder zwischen Staatsanwaltschaften
+und Gerichten wird nicht betrachtet.
+Für die elektronische Kommunikation in speziellen Fachbereichen, wie zum Beispiel Mahnsachen,
+Bußgeldverfahren, Handels-, Genossenschafts- und Partnerschaftsregistersachen, Schutzschriften sowie Schiffsregistersachen bestehen gesonderte Vorgaben, die in diesem Leitfaden in Kapitel 8 überblicksweise beschrieben werden.
+Die Voraussetzungen für den digitalen Austausch zwischen Polizei, Strafverfolgungsbehörden und
+Justiz in Strafsachen werden in gesonderten Projekten der Länder und des Bundes geschaffen und
+sind nicht Gegenstand dieses Leitfadens.
+
+1
+
+Im Interesse einer besseren Lesbarkeit wird auf die gleichzeitige Verwendung der Sprachformen männlich, weiblich und
+divers (m/w/d) verzichtet. Sämtliche Personenbezeichnungen gelten gleichermaßen für alle Geschlechter.
+
+5
+
+2
+
+Rechtliche Rahmenbedingungen
+
+Seit 2001 wurden umfangreiche rechtliche Rahmenbedingungen für den ERV geschaffen.2 Für die
+schriftformersetzende elektronische Kommunikation mit der Justiz hat der Bundesgesetzgeber dabei
+die sogenannten sicheren Übermittlungswege3 vorgesehen.
+Als sichere Übermittlungswege gelten die Übermittlungswege zwischen der elektronischen Poststelle
+des Gerichtes oder der Staatsanwaltschaft und
+-
+
+dem besonderen elektronischen Anwaltspostfach (beA)
+dem besonderen elektronischen Notarpostfach (beN)
+dem besonderen elektronischen Steuerberaterpostfach (beSt)
+dem besonderen elektronischen Behördenpostfach (beBPo)
+dem besonderen elektronischen Bürger- und Organisationenpostfach (eBO) sowie
+dem Postfach- und Versanddienst eines OZG-Nutzerkontos (MJP)
+
+Rechtanwälte, Notare, Gerichtsvollzieher sowie Behörden, Körperschaften und Anstalten des öffentlichen Rechts sind seit 1. Januar 2018 verpflichtet, einen sicheren Übermittlungsweg für die Zustellung elektronischer Dokumente zu eröffnen. Seit dem 1. Januar 2022 müssen Rechtsanwälte, Behörden und juristische Personen des öffentlichen Rechts vorbereitende Schriftsätze und deren Anlagen
+sowie schriftlich einzureichende Anträge und Erklärungen über den elektronischen Rechtsverkehr bei
+Gericht einreichen4. Dies gilt auch für die Kommunikation mit den Gerichtsvollziehern.5
+Für die Übermittlung von elektronischen Behördenakten gilt seit 30. April 2025 die Behördenaktenübermittlungsverordnung (BehAktÜbVO).
+Die sicheren Übermittlungswege beruhen auf der Infrastruktur des Elektronischen Gerichts- und Verwaltungspostfachs (EGVP), das sich für den ERV seit 2004 bewährt. Dabei ermöglicht die Einrichtung
+
+2
+
+Formvorschriftenanpassungsgesetz vom 13.07.2001, Zustellungsreformgesetz vom 25.06.2001, Justizkommunikationsgesetz vom 22.03.2005, Gesetz zur Förderung des elektronischen Rechtsverkehrs mit den Gerichten vom 10.10.2013, Gesetz
+zur Einführung der elektronischen Akte in der Justiz und zur weiteren Förderung des elektronischen Rechtsverkehrs vom
+05.07.2017, ERV-Ausbaugesetz vom 17.09.2021, Elektronischer-Rechtsverkehr-Verordnung-ERVV, ERV-Bekanntmachung.
+3 Gemäß § 130a Abs. 4 ZPO, gleichlautend mit § 55a Abs. 4 VwGO, § 46c Abs. 4 ArbGG, § 65a Abs. 4 SGG und § 52a Abs. 4
+FGO sowie § 32a Abs. 4 StPO
+4 § 130d ZPO, § 14b FamFG, § 46g ArbGG, § 65d SGG, § 52d FGO, § 55d VwGO. In Verfahren in Familiensachen und in Angelegenheiten der freiwilligen Gerichtsbarkeit besteht diese Pflicht auch für Notare.
+5 § 753 Abs. 5 ZPO
+
+6
+
+eines besonderen Postfaches den Versand von umfangreichen Anlagen, wie z.B. Behördenakten. Zudem sind die verfügbaren EGVP-Sende- und Empfangskomponenten6 häufig mit einer Funktion ausgestattet, die eine gerichtliche Anforderung eines elektronischen Empfangsbekenntnisses (eEB) erkennt und eine entsprechende Antwort generieren kann.
+
+3
+
+Das Grundprinzip
+
+Im ERV mit der Justiz werden Schriftgutobjekte (Dokumente und Akten) zwischen
+•
+
+identifizierten und
+
+•
+
+authentifizierten Postfachinhabern auf einem
+
+•
+
+sicheren elektronischen Transportweg
+
+ausgetauscht.
+Sind diese drei Voraussetzungen erfüllt, handelt es sich um einen sicheren Übermittlungsweg.
+Um die Übernahme in die jeweiligen IT-Systeme der Kommunikationspartner automatisiert zu ermöglichen, werden strukturierte, maschinenlesbare Daten beigefügt.
+Für diese drei Grundsäulen wurden technische Standards (EGVP-Transportprofil auf der Basis des
+OSCI-Transportstandards, SAFE, XJustiz) abgestimmt und die erforderlichen IT-Anwendungen (OSCIIntermediäre, SAFE-Verzeichnisdienst) bereitgestellt.
+
+ERV-Teilnehmer
+
+ERV-Teilnehmer
+ERV
+
+automa&sierte
+Weiterverarbeitung
+XJus&z
+
+automa&sierte
+Weiterverarbeitung
+XJus&z
+sichere
+Iden&täten
+SAFE
+
+sicherer Transport
+EGVP
+
+sichere
+Iden&täten
+SAFE
+
+6
+
+Jeder EGVP-Teilnehmer benötigt eine sogenannte EGVP-Sende- und Empfangskomponente, um Nachrichten zu versenden
+und zu empfangen. Einzelheiten sind in den Dokumenten zur Einrichtung von beBPo oder eBO enthalten.
+
+7
+
+Nachfolgend werden die technischen Vorgaben für den Transportweg und den Inhalt der Nachricht
+beschrieben. In Kapitel 7 sind die Standardvorgaben für die strukturierten Daten beschrieben.
+
+4
+
+Übermittlung der Nachrichten
+
+Der Austausch von Dokumenten, Akten und strukturierten, maschinenlesbaren Datensätzen auf einem sicheren Übermittlungsweg erfolgt
+•
+
+über die Infrastruktur des EGVP unter Verwendung des beA, beN, beSt, beBPo, eBO oder des
+MJP oder
+elektronische Kommunika+on
+
+sichere elektronische Kommunika$on über die EGVP-Infrastruktur
+
+elektronische Kommunika+on
++ Schri9formersatz
+
+Jus$z
+Jus$z-Pos)ächer
+
+können untereinander kommunizieren
+Keine Kommunika+on untereinander
+möglich!
+
+Rechtsanwälte, Notare und
+Steuerberater
+
+Behörde
+n
+
+beA, beN, beSt
+
+Rechtsgrundlagen Jus0z:
+§ 130 a ZPO, § 173 ZPO, § 55 a VwGO, § 46
+c ArbGG,
+§ 65 a SGG, § 52 a FGO, § 32 a StPO,
+§ 110 c OWiG
+Rechtsgrundlage Verwaltung:
+§ 3a VwVfG
+
+beBPo
+
+EGVPInfrastruktur
+
+eBO
+
+Bürger
+und Organisa$onen
+(Unternehmen, Verbände,
+Sachverständige, Dolmetscher…)
+
+MJP
+
+Inhaber
+eines Nutzerkontos
+
+Für die Ausstattung der professionellen Einreicher mit einem beA, beN oder beSt sind die jeweiligen
+berufsständischen Kammern zuständig.
+Informationen für die Einrichtung eines beBPo sind unter https://egvp.justiz.de/behoerdenpostfach/index.php und für das eBO unter https://egvp.justiz.de/buerger_organisationen/index.php zusammengetragen.
+4.1
+
+Beteiligte Kommunikationspartner
+
+Eine EGVP-Nachricht wird immer zwischen genau zwei Kommunikationspartnern ausgetauscht.
+Eine EGVP-Nachricht darf aus technisch-organisatorischen Gründen immer nur genau ein Verfahren
+des adressierten Gerichts oder der adressierten Staatsanwaltschaft betreffen. Dies gilt insbesondere
+auch für das Einreichen von Schriftsätzen in Klage- und Eilverfahren, die denselben Verfahrensgegenstand betreffen.
+
+8
+
+4.2
+
+Adressierung
+
+Für die Gerichte und Staatsanwaltschaften ist zur Kommunikation in gerichtlichen Verfahren, Ermittlungsverfahren und Bußgeldverfahren jeweils ein EGVP-Postfach eingerichtet.7
+Die EGVP-Postfächer der Justiz und der Inhaber der besonderen Postfächer beA, beN, beSt, beBPo,
+eBO und MJP sind im EGVP-Verzeichnisdienst8 auffindbar. Sie wurden auf Grundlage der rechtlichen
+Vorgaben identifiziert.9
+Für die Suche im EGVP-Verzeichnisdienst steht allen Postfachinhabern eine Funktion bereit. Alle beA,
+beN, beSt und beBPo können andere besondere elektronische Postfächer und die EGVP-Postfächer
+der Justiz adressieren und sind von ihnen adressierbar. MJP-Inhaber können nicht mit anderen MJPInhabern oder eBO-Inhabern kommunizieren. eBO-Inhaber können nur mit anderen eBO-Inhabern
+kommunizieren, wenn sie hierfür zusätzliche Dienste bei einem Drittanbieter für Intermediärsdienstleistungen beziehen (sogenanntes eBO-plus)10. Einzelheiten sind auf https://egvp.justiz.de/buerger_organisationen/index.php veröffentlicht.
+Die Bußgeldbehörden verwenden für die Übermittlung von Nachrichten in Bußgeldsachen das besonderes Behördenpostfach (beBPo), das für die Behörde eingerichtet wurde.
+Das heißt:
+beA, beN, beSt und beBPo können mit eBO- und MJP-Inhabern und untereinander kommunizieren,
+eBO- und MJP- Inhaber können mit beA, beN, beSt und beBPo, aber nicht untereinander
+kommunizieren. eBO-plus-Inhaber können auch untereinander kommunizieren.
+
+7
+
+Für besondere Kommunikationsszenarien, z.B. in Grundbuchsachen, gibt es aufgrund gesetzlicher Vorgaben weitere Postfächer.
+8 Der EGVP-Verzeichnisdienst wird auch SAFE-Verzeichnisdienst genannt. Er besteht aus den föderierten SAFE-Verzeichnisdiensten der Justiz, der Bundesrechtsanwaltskammer, der Bundesnotarkammer und künftig der Steuerberaterkammer.
+9 Die Identifizierung kann an den EGVP Rollen egvp_justiz, bea, ben, best, bebpo, ebo und ozg_postfach erkannt werden.
+10
+Eine Ausnahme gilt für die Gerichtsvollzieher, Patentanwälte sowie Gewerkschaften und Verbände, die für eine Partei vor
+Gericht vertretungsbefugt sind. Sie können mit ihrem eBO zum Zwecke der Zustellung auch andere eBO-Inhaber adressieren, ohne hierfür zusätzliche Intermediärsdienstleistungen in Anspruch zu nehmen.
+
+9
+
+4.3
+
+Authentifizierung des Absenders
+
+Jede EGVP-Nachricht enthält einen vertrauenswürdigen Herkunftsnachweis (VHN), der Auskunft darüber gibt, ob die Nachricht über einen bestimmten sicheren Übermittlungsweg übermittelt wurde.11
+Er dient somit zur Authentifizierung der absendenden Person. Der VHN ist eine signierte Datei im
+XML-Format. Die EGVP-Sende- und Empfangskomponenten prüfen den VHN beim Empfang von
+Nachrichten automatisiert. Die Prüfergebnisse werden protokolliert. Die Protokolle werden für den
+Empfänger im PDF-Format bereitgestellt (siehe Kapitel 4.4). Es besteht deshalb keine Notwendigkeit,
+die strukturierten Daten des VHN gesondert auszuwerten oder in eine lesbare Form umzuwandeln.
+4.4
+
+Nachweise zum Versand und Empfang
+
+Für jede EGVP-Nachricht werden während des Übermittlungsprozesses bestimmte Informationen automatisiert protokolliert. Hierzu gehört insbesondere der Zeitpunkt des Eingangs einer Nachricht. Zudem wird beim Empfang einer EGVP-Nachricht unter anderem automatisch geprüft, ob die Nachricht
+unverändert ist und ob ein sicherer Übermittlungsweg verwendet wurde (Prüfung des VHN). Darüber
+hinaus werden alle qualifizierten elektronischen Signaturen der beigefügten Anhänge geprüft.
+4.4.1
+
+Eingangszeitpunkt
+
+Gemäß den gesetzlichen Vorschriften (z.B. § 130 a Abs. 5 ZPO) gilt ein Dokument als eingegangen,
+sobald es auf der für den Empfang bestimmten Einrichtung des Gerichts gespeichert ist.
+In der EGVP-Infrastruktur bilden die sogenannten OSCI-Intermediäre die für den Empfang bestimmten Einrichtungen der jeweiligen Postfachinhaber. Ein Dokument gilt deshalb im Sinne des Gesetzes
+als eingegangen, wenn die zugehörige Nachricht auf dem OSCI-Intermediär des Empfängers eingegangen ist. Es kommt nicht darauf an, dass die Nachricht vom OSCI-Intermediär auch abgeholt
+wurde.
+In der EGVP-Infrastruktur werden sowohl der Zeitpunkt des Eingangs auf dem Intermediär als auch
+der Zeitpunkt der Abholung der Nachricht vom Intermediär protokolliert. Gemäß den gesetzlichen
+Vorschriften (z.B. § 130a Abs. 5 ZPO) ist dem Absender eine automatisierte Bestätigung über den
+Zeitpunkt des Eingangs zu erteilen. Die EGVP-Sende- und Empfangskomponenten erstellen deshalb
+
+. BeBPo-VHN-Zertifikaten werden im Auftrag der Justiz unter
+
+11 Siehe VHN-Konzept https://egvp.justiz.de//index.php
+
+https://zertifikate.safe-justiz.de/UserCertificateManagementUI/#!/creation zum Download bereitgestellt.
+
+10
+
+aus den protokollierten Daten eine Eingangsbestätigung, die zur Akte genommen werden kann. Sie
+enthält den Zeitpunkt des Eingangs und ggf. auch den Zeitpunkt der Abholung der EGVP-Nachricht.
+4.4.2
+
+Prüfergebnisse für empfangene Nachrichten
+
+Nach dem Empfang einer EGVP-Nachricht wird automatisch geprüft, ob die Nachricht integer ist und
+ob ein sicherer Übermittlungsweg verwendet wurde (Prüfung des VHN, siehe Kapitel 0).
+Darüber hinaus werden alle elektronischen Signaturen der beigefügten Anhänge geprüft.
+Die Prüfergebnisse werden in den Prüfvermerk und/oder in das Prüfprotokoll übernommen und dem
+Empfänger einer Nachricht bereitgestellt.
+Der Prüfvermerk bündelt alle für die Übermittlung fachlich relevanten Informationen.
+Es wird empfohlen, den Prüfvermerk aufzubewahren, da er als Nachweis der Übermittlung dient.
+Das Prüfprotokoll enthält neben den fachlichen Informationen des Prüfvermerkes weitere technische
+Informationen zur Nachricht und zu den Signaturen der Anlagen. Es kann in Supportfällen zu Signaturen und zur Nachricht herangezogen werden.
+Beide Dokumente werden sowohl als sogenannte strukturierte Sendungsdaten im XML-Format, die
+maschinell verarbeitet werden können, als auch im PDF-Format bereitgestellt.
+Der Prüfvermerk und das Prüfprotokoll enthalten Informationen darüber,
+•
+•
+•
+•
+•
+
+wer (Inhaber des Absenderpostfaches der EGVP-Nachricht)
+was (Hashwerte der beigefügten Dateien, Dateinamen, Prüfergebnisse etwaiger Signaturen)
+wann (Zeitstempel des Eingangs)
+wie (Angaben zum sicheren Übermittlungsweg, Angaben zu signierten Dokumenten)
+an wen (Empfängerpostfach der Nachricht)
+
+über die EGVP-Infrastruktur übermittelt hat.
+4.4.3
+
+Nachweis für versendete Nachrichten
+
+Nach dem Versand einer Nachricht wird automatisch eine Eingangsbestätigung erstellt, die den Eingangszeitpunkt enthält. Diese kann zum Nachweis des Eingangs in den E-Akten-Systemen oder Fachverfahren der Absender gespeichert werden.
+
+11
+
+4.5
+
+Größe der EGVP-Nachrichten und Anzahl der Anlagen
+
+Die Anzahl und die maximale Größe12 der Anlagen einer EGVP-Nachricht werden in der Bekanntmachung des Bundesministeriums der Justiz zu § 5 der Elektronischer-Rechtsverkehr-Verordnung (ERVBekanntmachung - ERVB) geregelt.13
+Die Regelungen der ERVV bzw. ERVB beziehen sich auf die Übertragung von Dokumenten und Anlagen nach § 130a ZPO, § 46c ArbGG, § § 65a SGG, § 55a VwGO und § 52a FGO. Sofern die Größe oder
+die Anzahl der Anlagen, die mit einer Nachricht übermittelt werden sollen, die Mengenbeschränkungen überschreiten, können sie ersatzweise auf einem physischen Datenträger an das Gericht übermittelt werden. Die zulässigen physischen Datenträger sind ebenfalls in der ERVB aufgezählt.
+Für die Übermittlung elektronischer Akten gilt die Behördenaktenübermittlungsverordnung (BehAktÜbV). Nach § 3 Abs. 1 Satz 4 BehAktÜbV i.V.m. § 5 Abs. 1 ERVV sollen Behördenakten den Standards
+der ERVB entsprechen und demnach grundsätzlich eine Größe von 200 MB und 1.000 Anlagen nicht
+überschreiten. Sind sie jedoch größer, können sie gleichwohl übertragen werden und gelten - sofern
+die Übertragung möglich war - als wirksam eingegangen.14
+Die Regelung in § 4 Abs. 2 BehAktÜbV hat nicht zur Folge, dass Behörden Akten, die größer als 200
+MB oder 1.000 Anlagen sind, in jedem Fall per Ersatzeinreichung übermitteln können. Denn die Ersatzeinreichung ist erst dann zulässig, wenn die Höchstgrenzen zwischen den Kommunikationspartnern nicht technisch verändert oder aufgehoben worden sind, was für die Justiz zur Übermittlung
+von elektronischen Akten grundsätzlich in Betracht kommt.
+
+4.6
+
+Kennzeichnung eiliger Nachrichten
+
+Um auch elektronische Einreichungen wie in der Papierwelt als eilbedürftig kennzeichnen zu können,
+sieht der XJustiz-Standard eine Werteliste (Nachrichtenkopf, Element „Sendungspriorität“) vor. Beim
+Versand eiliger Nachrichten kann in der beizufügenden XJustiz-Nachricht ein Wert aus dieser Liste
+ausgewählt werden. Dabei steht für Nachrichten, die im Regelbetrieb als eilig gekennzeichnet wer-
+
+12 Die Größenangaben beziehen sich immer auf die Summe der Größen der beigefügten Anlagen und nicht auf die Größe
+
+der EGVP-Nachricht selbst.
+Die Bekanntmachung wird im elektronischen Bundesanzeiger und auf https://justiz.de/laender-bund-europa/elektronische_kommunikation/index.php bekanntgegeben.
+14
+Auszug aus der Begründung des Regierungsentwurfes: „Da es sich um eine Soll-Vorgabe handelt, ist die Übermittlung der
+elektronischen Akte auch dann bewirkt, wenn sie nicht den nach § 5 Absatz 1 ERVV bekannt gemachten technischen Standards für die Übermittlung und Eignung zur Bearbeitung elektronischer Dokumente entspricht, soweit die elektronische Akte
+für das Gericht lesbar und bearbeitungsfähig ist.“
+13
+
+12
+
+den sollen, der Wert 001 „Eilt“ zur Verfügung. Zur Kommunikation mit den bei Gerichten und Staatsanwaltschaften eingerichteten Bereitschaftsdiensten muss auf die hierfür speziell vorgesehenen
+Werte der Liste zurückgegriffen werden. Die Behandlung als eilig gekennzeichneter Nachrichten obliegt, wie auch in der Papierwelt, den Justizbehörden.
+4.7
+
+Übermittlung von Verschlusssachen
+
+Die Komponenten der EGVP-Infrastruktur können derzeit nicht für den Versand von Verschlusssachen im Sinne der Verschlusssachenanweisungen genutzt werden.
+
+13
+
+5
+
+Inhalt der Nachrichten
+
+Eine EGVP-Nachricht darf aus technisch-organisatorischen Gründen immer nur genau ein Verfahren
+des adressierten Gerichts oder der adressierten Staatsanwaltschaft betreffen. Dies gilt insbesondere
+auch für Einreichungen von Schriftsätzen in Klage- und Eilverfahren, die denselben Verfahrensgegenstand betreffen.
+Eine EGVP-Nachricht enthält grundsätzlich als Anlagen (Attachments)
+•
+•
+
+eine bestimmte Anzahl (siehe Kapitel 4.5) von Dokumenten und
+eine sogenannte XJustiz-Nachricht im XML-Format, die den Inhalt der Sendung in strukturierter, maschinenlesbarer Form beschreibt (siehe Kapitel 5.1.).
+
+Die XJustiz-Nachricht enthält unter anderem die Information, ob es sich bei den übermittelten Dokumenten um einzureichende Schriftsätze handelt oder ob alle bzw. ein Teil der Dokumente in ihrer
+Gesamtheit eine Akte bilden. Zudem sind Informationen zu den Dokumenten, wie z.B. die Art des Dokumentes (Klage, Urteil, Beschluss…) enthalten, die dem Empfänger ermöglichen, die Akte inhaltlich
+zu erschließen. Sofern diese Informationen (siehe Kapitel 7.3) für die Dokumente in der XJustiz-Nachricht aufgeführt sind, kann auf die Verwendung sprechender Dateinamen verzichtet werden. In diesem Fall stellen die Dateinamen ausschließlich ein technisches Metadatum dar.
+Einzelheiten zu XJustiz sind in Kapitel 7 dargestellt.
+5.1
+
+Strukturierter maschinenlesbarer Datensatz
+
+In der EGVP-Infrastruktur gilt für alle EGVP-Sende- und Empfangskomponenten die technische Vorgabe, dass jeder EGVP-Nachricht ein strukturierter maschinenlesbarer Datensatz gemäß dem XJustizStandard in der aktuellen Version15 als Anlage im XML-Format (XJustiz-Nachricht) beigefügt werden
+muss, um die automatisierte Weiterverarbeitung zu gewährleisten. Die XJustiz-Nachricht muss immer
+den Dateinamen „xjustiz_nachricht.xml“ tragen.
+Somit enthält jede EGVP-Nachricht eine XJustiz-Nachricht im XML-Format, die aufgrund der technischen Vorgaben mindestens zu folgenden Elementen Angaben enthält:
+•
+•
+•
+•
+
+15
+
+Absender der Nachricht,
+Empfänger der Nachricht,
+Sachgebiet,
+Aktenzeichen des Empfängers
+(Bei der Übermittlung verfahrenseinleitender Dokumente ist „neu“ anzugeben. Wenn das
+Aktenzeichen aus sonstigen Gründen noch nicht bekannt ist, ist der Wert „unbekannt“ anzugeben.)
+
+Der Releasezyklus der XJustiz-Versionen wird auf www.xjustiz.de und in der ERV-Bekanntmachung bekanntgemacht.
+
+14
+
+Die XJustiz-Nachricht beschreibt den Inhalt der Sendung in strukturierter, maschinenlesbarer Form
+und dient der automatisierten Weiterverarbeitung der Nachrichteninhalte (Routing und Übernahme
+von Daten in die IT-Systeme des Empfängers).
+Um das Potential strukturierter Daten so umfangreich wie möglich ausnutzen zu können, sollen über
+die oben genannten Informationen hinaus möglichst viele weitere Daten, mindestens jedoch die Daten, die in § 2 Abs. 3 der ERVV aufgeführt sind, in der XJustiz-Nachricht enthalten sein.
+In der XJustiz-Nachricht müssen darüber hinaus alle Dateien, die mit der Nachricht versendet werden, aufgeführt werden.
+Detaillierte Informationen sind in Kapitel 7.1 und der EXCEL-Datei „2025_01_30_ERV_Profilierung_XJustiz_Nachricht_Uebermittlung_Schriftgutobjekte_und_eEB_XJustiz_3_5.xlsx“, die als Anlage
+beigefügt ist, aufgeführt.
+Die Daten einer XJustiz-Nachricht sind grundsätzlich Hilfsdaten, die der maschinellen Datenverarbeitung dienen. In bestimmten, gesetzlich geregelten Kommunikationsszenarien, wie zum Beispiel beim
+elektronischen Empfangsbekenntnis (Einzelheiten siehe Kapitel 7.2), § 173 ZPO, stellen die XJustizDaten die führenden Daten dar. Für diese führenden XJustiz-Daten wird empfohlen, sie aufzubewahren.16
+5.2
+
+Vorgaben für die Dateinamen
+
+Die Bildungsvorschriften für Dateinamen sind in den Anforderungen zur Teilnahme von Drittanwendungen am OSCI-gestützten elektronischen Rechtsverkehr17 und im XJustiz-Standard geregelt. Insgesamt gelten folgende technische Standardvorgaben:
+•
+•
+•
+
+In ein und derselben EGVP-Nachricht dürfen keine Dateien mit vollständig identischen Dateinamen versandt werden.
+Um die Eindeutigkeit von Dateinamen sicherzustellen, sollen sie nach der Syntax "Dokumentname_UUID.Dateiformat" gebildet werden.18
+Die Länge von Dateinamen darf nur 90 Zeichen inkl. der Dateiendungen betragen. In Dateinamen dürfen nur alle Buchstaben des deutschen Alphabetes einschließlich der Umlaute Ä, ä,
+Ö, ö, Ü, ü und ß genutzt werden. Zudem dürfen alle Ziffern und die Zeichen "Unterstrich" und
+"Minus" genutzt werden. Punkte sind nur als Trennzeichen zwischen dem Dateinamen und
+der Dateinamenserweiterung zulässig. Nur bei konkatenierten Dateinamensendungen, z.B.
+
+16 XJustiz-Nachrichten, die keine führenden Daten enthalten, können vom Empfänger, z.B. bei invaliden Datensätzen, so
+
+verändert werden, dass sie maschinell verarbeitet werden können.
+https://egvp.justiz.de//index.php
+18
+Universally Unique Identifier, Die UUID ist eine eindeutige, 36 Zeichen lange Zeichenkette, die nach den Vorgaben
+ISO/IEC 9834-8:2005 erzeugt wird.
+17
+
+15
+
+bei abgesetzten Signaturdateien, dürfen Punkte auch im Dateinamen genutzt werden (z.B.
+Dokument1.pdf.pkcs7).
+•
+
+•
+
+Soweit eine signierte Datei gemeinsam mit einer zugehörigen Signaturdatei übersandt wird,
+hat die Signaturdatei exakt denselben Dateinamen wie die signierte Datei zu erhalten, mit
+Ausnahme des Dateiformats. Diese gibt das Format der Signaturdatei wieder (Identität bei
+UUID und Dokumentname, z.B. Klage_UUID.pdf und Klage_UUID.pdf.pkcs7), um die automatisierte Prüfung der elektronischen Signatur zu ermöglichen. Dies gilt nur für die erste Signaturdatei, die zu einer Datei erstellt wird. Jede weitere Signaturdatei muss einen abweichenden Dateinamen erhalten (z.B. durch Ergänzung einer Ziffer), da andernfalls komplett identische Dateinamen entstehen. Die Länge von Dateinamen von Signaturdateien darf ebenfalls
+nur 90 Zeichen inkl. der Signaturdateiendungen betragen.
+Die XJustiz-Nachricht, die einer EGVP-Nachricht beigefügt wird, beschreibt den Inhalt der
+Nachricht und muss immer den Dateinamen xjustiz_nachricht.xml tragen. Sofern der EGVPNachricht weitere XJustiz-Nachrichten, z.B. bei der Weiterleitung von Nachrichten anderer
+Beteiligter oder als Bestandteil von Akten, beigefügt werden müssen, so muss den Dateinamen dieser XJustiz-Datensätze eine UUID angestellt werden (xjustiz_nachricht_UUID.xml).
+
+Wenn mehrere Dateien übermittelt werden und die Dateien ausnahmsweise nicht in der XJustizNachricht aufgeführt werden können, sollen die Dateiname eine logische Nummerierung enthalten.
+Auf diese Weise ist es den Empfängern möglich, die Reihenfolge der übersandten Dokumente auch
+dann zu ermitteln, wenn die Angaben zur Reihenfolge nicht in der XJustiz-Nachricht enthalten sind.
+Eine maschinell gestützte Sortierung der Dateien ist allerdings in diesem Fall nicht möglich, so dass
+dringend empfohlen wird, die Dateien in der XJustiz-Nachricht aufzuführen.
+Wenn Dateien, die von einem Beteiligten ohne UUID im Dateinamen eingereicht wurden, von den
+Gerichten oder Staatsanwaltschaften an eine andere Beteiligte bzw. einen anderen Beteiligten zugestellt oder weitergeleitet werden, wird im Dateinamen eine UUID angestellt. Sollte der Dateiname
+dadurch länger als 90 Zeichen werden, wird der ursprüngliche Dateiname gekürzt.
+5.3
+
+Anforderungen an die Dokumente
+
+Für die elektronische Einreichung von Schriftsätzen sowie sämtlichen Erklärungen, die der Schriftform bedürfen, gelten die rechtlichen Vorschriften.19
+Die elektronischen Dokumente müssen im Dateiformat PDF als Einzeldateien eingereicht werden und
+für die Bearbeitung durch das Gericht geeignet sein. Wenn bildliche Darstellungen im Dateiformat
+PDF nicht verlustfrei wiedergegeben werden können, darf das elektronische Dokument zusätzlich im
+
+19
+
+§ 130 a ZPO, § 173 ZPO, § 55 a VwGO, § 46 c ArbGG, § 65 a SGG, § 52 a FGO, § 32 a StPO, § 110 c OWiG, ERVV und ERVB
+
+16
+
+Dateiformat TIFF übermittelt werden. Für die Übermittlung elektronischer Beweismittel gelten keine
+Formatbeschränkungen.
+Sofern Papierdokumente zum elektronischen Versand eingescannt werden, ist eine Auflösung zu
+wählen, die zu einer möglichst geringen Dateigröße der Scandatei führt, aber die Inhalte noch vollständig darstellt. Sofern die Dateigröße aufgrund der Auflösung sehr groß ist, besteht die Gefahr,
+dass das eingescannte Dokument nicht durch das Gericht oder die Staatsanwaltschaft verarbeitet
+werden kann und abgewiesen wird.
+Der Versand in Form einer ZIP-Datei ist nicht zulässig.
+Welche technischen Standards erfüllt sein müssen, damit der Einreicher davon ausgehen darf, dass
+ein Dokument für die Bearbeitung durch die Justiz geeignet ist, ergibt sich aus der ERVB in der jeweils
+gültigen Fassung. Die technischen Standards der ERVB sind als Soll-Vorschrift ausgestaltet, so dass
+ein Gericht – wenn die Eignung zur Bearbeitung sichergestellt ist – das Dokument zulassen muss,
+auch wenn die Standards nicht eingehalten sind.20 Für die Einreicher, die die Standards einhalten,
+bieten die Vorgaben der ERVB „hinreichende Sicherheit, weil sie Maßstab für die Eignung zur Bearbeitung [sind]. Allerdings schließt die Erfüllung der Standards nicht aus, dass das Gericht die Einreichung
+im Einzelfall aufgrund anderer technischer Defekte zurückweisen kann“21. Sollten die Dokumente für
+die Bearbeitung durch das Gericht nicht geeignet sein, kann die Einreichung im Einzelfall abgewiesen
+werden.
+Da die Sicherheit bei der Übertragung bereits durch die sogenannte doppelte Verschlüsselung in der
+EGVP-Infrastruktur sichergestellt ist, ist auf eine zusätzliche gesonderte Verschlüsselung sowie auf
+etwaige Einschränkungen der Leserechte auch vor dem Hintergrund, dass die Eignung zur Bearbeitung nicht sichergestellt ist, zu verzichten.
+
+20
+21
+
+Siehe Begründung des ERV-Ausbaugesetzes, BT-Drucksache 19/28399, S. 40
+Siehe Begründung des ERV-Ausbaugesetzes, BT-Drucksache 19/28399, S. 40
+
+17
+
+5.4
+
+Anforderungen bei der Übersendung von Akten
+
+Auch die Behördenakten sollen gemäß §2 Abs.2 BehAkÜbV über einen sicheren Übermittlungsweg
+eingereicht werden. Die in diesem Dokument beschriebenen technischen Standards gelten grundsätzlich auch für die Übermittlung elektronischer Behördenakten.
+5.4.1
+
+Struktur der Akte
+
+Die Dokumente einer elektronischen Akte sollen als Einzeldokumente (§ 3 Abs. 1 S 2 BehAkÜbV) im
+PDF-Format (§ 3 Abs. 1 S 1 BehAkÜbV) eingereicht werden. Sie dürfen aus technisch-organisatorischen Gründen nicht in einem Gesamt-PDF zusammengefasst werden.
+Sofern die Dokumente der Akte nicht im PDF-Format geführt werden, sollen sie vor dem Versand in
+das PDF-Format umgewandelt werden.
+Es ist nicht erforderlich, etwaige Ausgangsdokumente zu übermitteln. Es wird vielmehr davon ausgegangen, dass es sich bei der Übermittlung einer Akte um die PDF-Repräsentate der Dokumente der
+Akte handelt.
+In bestimmten Ausnahmefällen kann die Übermittlung der dem Dokument zugrundeliegenden Datei
+im ursprünglichen Format (z.B. Excel) erforderlich sein. Dies gilt immer dann, wenn
+„1. zu befürchten ist, dass inhaltstragende Informationen der Datei, die im ursprünglichen Datei-Format vorhanden sind, aufgrund der Übertragung in das Dateiformat PDF nicht sichtbar oder nicht enthalten sind, oder wenn durch den Formattransfer sonstige Qualitätsverluste zu befürchten sind oder
+2. dies zur besseren Bearbeitbarkeit oder Lesbarkeit durch das Gericht erforderlich ist.“ (§ 3 Abs. 2 S
+2 BehAkÜbV).
+In der Akte gegebenenfalls vorhandene Signaturdateien sollen nicht übermittelt werden (§ 2 Abs. 3 S
+1 BehAkÜbV). Protokolle über die Prüfung von Signaturdateien können gemäß § 2 Abs. 3 S 2 BehAkÜbV übermittelt werden, wenn der Absender den Nachweis der Schriftform im Einzelfall für erforderlich hält. Sofern die Vorlage der Ursprungsdokumente der Akte, einschließlich etwaiger Signaturdateien, erforderlich ist und durch die Gerichte oder Staatsanwaltschaften nachgefordert werden,
+sind diese gemäß § 2 Abs. 3 S 3 BehAkÜbV zu übermitteln.
+Auf den Dokumenten angebrachte irreversible Markierungen, Stempel, Kommentare, Ergänzungen
+und handschriftlichen Notizen müssen mit übermittelt werden.
+
+18
+
+Zusätzlich zu den Dokumenten der Akte soll gemäß § 2 Abs. 4 BehAkÜbV eine XJustiz-Nachricht übermittelt werden, die mindestens Folgendes enthalten:
+1. die in § 2 Absatz 3 der Elektronischer-Rechtsverkehr-Verordnung genannten Daten,
+2. das Aktenzeichen der übermittelnden Stelle,
+3. Angaben zur Reihenfolge der Dokumente in der Akte,
+4. Angaben zum Typ der Dokumente der Akte und
+5. das Eingangsdatum der Dokumente der Akte.
+Diese Informationen der XJustiz-Nachricht erlauben den Empfängern, die Einzeldokumente in der
+richtigen Reihenfolge als Akte zu übernehmen sowie die Akte inhaltlich zu erschließen. Einzelheiten
+sind in Kapitel 7.3 und in der Anlage beschrieben. Sofern ausnahmsweise keine XJustiz-Nachricht
+übermittelt werden kann, muss sich die Reihenfolge der Dokumente aus der Nummerierung der Dateinamen ergeben.
+5.4.2
+
+Paginierungsinformationen der Akten
+
+Typischerweise werden Behördenakten vor der Übersendung in Papierform durchgängig paginiert.
+Dieses Vorgehen soll auch bei elektronischen Übermittlungen fortgeführt werden, indem die Paginierung auf den Seiten der Einzel-PDF-Dokumente des Repräsentats durchlaufend angegeben wird. Dabei ist eine fortlaufende Paginierung sicherzustellen, so dass die Nummerierung sowohl bei erneuter
+Übersendung des Repräsentats als auch bei Nachreichung von ergänzenden Aktenteilen nicht von
+der ursprünglichen Paginierung abweicht.
+Für Dokumente, die aus der Akte entfernt wurden oder aus technischen Gründen nicht als Repräsentate übermittelt werden können, sollen auch bei der elektronischen Aktenführung Fehlblätter zur
+Akte genommen werden. Die Fehlblätter sollen eine Information zum Grund des Fehlens des Dokumentes enthalten. Zusammen mit der Paginierungsinformation kann auf diese Weise die Vollständigkeit der Akte nachvollzogen werden.
+
+19
+
+6
+
+Weiterverarbeitung der von der Justiz übermittelten Nachrichten
+
+6.1
+
+Übernahme in E-Aktensysteme oder Fachverfahren der Empfänger
+
+Soweit keine fachlichen Gründe entgegenstehen, muss der Empfänger die EGVP-Nachricht nicht als
+Ganzes in der E-Akte oder in einem Fachverfahren speichern oder archivieren. Es sind lediglich die
+übermittelten Dokumenten zu übernehmen. Zusätzlich sollten die Prüfdokumente (Prüfvermerk, Eingangsbestätigung, ggf. Prüfprotokoll) zur E-Akte bzw. zum Fachverfahren genommen werden. 22
+Die Informationen, die im Prüfvermerk enthalten sind, dienen als Nachweis für folgende fachliche
+Fragestellungen:
+•
+
+•
+•
+
+Wer (Absender) hat welche Dokumente (Liste der Dokumente) in welchem Format (Formatangaben der Dokumente) auf welchem Übermittlungsweg (Angaben zum Übermittlungsweg) eingereicht?
+Wann ist die Nachricht (und sind somit die Dokumente) eingegangen?
+Für welche Dokumente ist die Schriftform erfüllt (sicherer Übermittlungsweg oder qualifizierte elektronische Signatur)?
+
+Zusätzlich kann die Datei vhn.xml, die den vertrauenswürdigen Herkunftsnachweis (VHN) beinhaltet,
+nebst Signaturdatei in den E-Akten-Systemen oder Fachverfahren gespeichert und mit den in ihr referenzierten Dokumenten verknüpft werden.23
+Die Datei vhn.xml dient zusätzlich der Unterstützung im Supportfall, da sie auch die Herstellerangaben zur Software, mit der die Nachricht erzeugt und/oder versandt wurde, enthält.
+6.2
+
+Übernahme in die Papierakte
+
+Sofern die Dokumente ausgedruckt und zur Papierakte genommen werden, sind nach den Grundsätzen der ordnungsgemäßen Aktenführung die Umstände des elektronischen Eingangs zu dokumentieren. Hierzu genügt es, den Prüfvermerk, der alle erforderlichen Informationen enthält, auszudrucken
+und abzuheften.
+
+22
+
+Sofern die fachlichen Informationen aus dem Prüfvermerk für die Anzeige in der E-Akte/im Fachverfahren
+aufbereitet werden sollen, können sie aus der entsprechenden .xml-Datei (pruefvermerk.xml) ausgelesen werden, wenn die EGVP Sende- und Empfangskomponente der Bußgeldbehörde die Inhalte des Prüfvermerks im
+XML-Format bereitstellt.
+
+23 Mit Hilfe der Datei vhn.xml, die durch die Signatur selbst integritätsgeschützt ist, kann nachträglich durch Vergleich der
+
+Hashwerte erneut maschinell geprüft und nachgewiesen werden, von wem die Dokumente versandt wurden und dass sie
+nach dem Empfang nicht verändert wurden.
+
+20
+
+6.3
+
+Übermittlung der Dokumente an Dritte
+
+Sofern ein Dokument, das auf einem sicheren Übermittlungsweg übermittelt wurde, an einen anderen Beteiligten weitergeleitet werden soll, kann der Prüfvermerk als Integritäts- und Authentizitätsnachweis beigefügt werden.24
+6.4
+
+Verteilung der Nachrichten innerhalb des eigenen Verantwortungsbereichs
+
+Für das Weiterleiten der Dokumente zum einschlägigen IT-System der Beteiligten und die Zuordnung
+zu einer bestimmten Akte stehen die Informationen in der Datei „xjustiz_nachricht.xml“, die jeder
+Nachricht beigefügt sein muss, zur Verfügung.
+Für das automatisierte technische Routing können der Name der XJustiz-Nachricht, das Element „Aktenzeichen Empfänger“ im Nachrichtenkopf, das Element „Sachgebiet“ in den Grunddaten/Instanzdaten oder das Element „Ereignis“ im Nachrichtenkopf genutzt werden, so dass es für eine reibungslose Weiterverarbeitung bei allen ERV-Teilnehmern wesentlich darauf ankommt, dass diese Angaben
+im XJustiz-Datensatz enthalten sind. Einzelheiten sind in Kapitel 7 und in der Anlage dargestellt.
+6.5
+
+Weiterleitung von Nachrichten
+
+Für die Weiterleitung von Nachrichten wurde folgender Standard festgelegt:
+Mit dem Standard wird das Ziel verfolgt, die Komfortfunktion für die Weiterleitung von ERV-Nachrichten, die in einigen ERV-SES und Fachanwendungen für den ERV umgesetzt ist, einheitlich zu spezifizieren, damit eine maschinelle Weiterverarbeitung möglich ist.
+Die Komfortfunktion „Weiterleitung von Nachrichten“ ermöglicht die Weiterleitung von Nachrichten
+ohne darüberhinausgehenden gesonderten Erklärungsgehalt. Der Empfänger soll erkennen können,
+•
+•
+•
+•
+
+dass es sich um eine weitergeleitete Nachricht
+eines bestimmten Absenders
+an einen bestimmten Empfänger handelt und
+wann diese Nachricht bei dem ursprünglichen Empfänger eingegangen ist.
+
+Darüber hinaus enthält die weitergeleitete Nachricht keinen Erklärungsgehalt.
+Davon unberührt ist der Versand von Dokumenten aus eingegangenen Nachrichten zusammen mit
+einem Anschreiben, das den Grund der Weitergabe enthält. In diesen Fällen kommen die beschriebenen Standardvorgaben nicht zur Anwendung.
+Der Standard ist seit dem 01.12.2023 gültig und kann seitdem umgesetzt werden. Er muss spätestens
+bis zum 1.12.2024 umgesetzt sein.
+
+24 Wie der Bezug zwischen dem Dokument und dem Prüfvermerk hergestellt werden kann, ist in Kapitel 7.3.5 beschrieben.
+
+21
+
+Für die Weiterleitung von Nachrichten ist zwingend eine neue EGVP-Nachricht (= Weiterleitungsnachricht) zu erstellen.
+6.5.1
+
+Anlagen der Weiterleitungsnachricht
+
+Die neue Nachricht enthält im Attachments-Ordner
+•
+•
+•
+
+alle Anhänge der weiterzuleitenden Nachricht (= ursprüngliche Nachricht) als Einzeldateien,
+einschließlich der xjustiz_nachricht.xml, die der ursprünglichen Nachricht beigefügt war,
+den Prüfvermerk25 der ursprünglichen Nachricht im PDF-Format und im xml-Format (pruefvermerk.pdf und pruefvermerk.xml - siehe A24 der Anforderungen an die ERV-SES) sowie
+den VHN26 (vhn.xml, vhn.xml.p7s) der ursprünglichen Nachricht.
+
+Weitere, automatisch erzeugte Prüfdateien, wie z.B. Prüfprotokolle (pruefprotokoll.pdf und pruefprotokoll.xml), die für die ursprüngliche Nachricht erstellt wurden, dürfen nicht in die Weiterleitungsnachricht übernommen werden.
+Es dürfen keine weiteren Anhänge ergänzt werden.
+Es ist nicht zulässig, die Bestandteile der weiterzuleitenden Nachricht im ZIP-Format beizufügen.
+6.5.2
+
+Dateinamen
+
+Die Dateien vhn.xml, pruefvermerk.pdf, pruefvermerk.xml und xjustiz_nachricht.xml der ursprünglichen Nachricht müssen jeweils um eine eigene UUID am Ende des Dateinamens ergänzt werden.
+Auf diese Weise können VHN, Prüfvermerk und die XJustiz-Nachricht der ursprünglichen
+Nachricht vom VHN, dem Prüfvermerk und der XJustiz-Nachricht der Weiterleitungsnachricht
+unterschieden werden.
+Die Datei vhn.xml.p7s muss dieselbe UUID erhalten, wie die Datei vhn.xml.
+Auf diese Weise wird die automatisierte Signaturprüfung erleichtert.
+Die Dateinamen der Anlagen der ursprünglichen Nachricht dürfen nicht geändert werden.
+
+25 Der Prüfvermerk gibt Auskunft darüber, über welchen Übermittlungsweg und von welchem Absender an welchen Empfänger die ur-
+
+sprüngliche Nachricht übermittelt wurde und gibt ihren Eingangszeitpunkt wieder.
+26 Der VHN ermöglicht dem Empfänger, den Übermittlungsweg, Absender und Empfänger der ursprünglichen Nachricht erneut zu prüfen.
+
+22
+
+Auf diese Weise ist sichergestellt, dass die Informationen der xjustiz_nachricht.xml der ursprünglichen Nachricht den in ihr beschriebenen Dateien automatisiert zugeordnet werden
+können.
+Für die Weiterleitungsnachricht ist eine neue xjustiz_nachricht.xml zu erstellen. Hierfür ist die Nachricht „nachricht.gds.uebermittlungSchriftgutobjekte.0005005“ zu verwenden.
+ursprüngliche
+Nachricht
+
+Weiterleitungsnachricht
+vor Versand
+
+A"achments
+
+A"achments
+
+UUID1.pdf
+UUID2.pdf
+
+UUID1.pdf
+UUID2.pdf
+xjus.z_nachricht.xml
+
+pruefvermerk.pdf
+pruefvermerk.xml
+vhn.xml
+vhn.xml.p7s
+
++UUID
+
++UUID
+
+xjus.z_nachricht_UUIDa.xml
+
+pruefvermerk_UUIDb.pdf
+pruefvermerk_UUIDc.xml
+vhn_UUIDd.xml
+vhn_UUIDd.xml.p7s
+
+Weiterleitungsnachricht
+beim Empfang
+A"achments
+UUID1.pdf
+UUID2.pdf
+xjus.z_nachricht_UUIDa.xml
+xjus.z_nachricht.xml
+pruefvermerk_UUIDb.pdf
+pruefvermerk_UUIDc.xml
+vhn_UUIDd.xml
+vhn_UUIDd.xml.p7s
+
+vhn.xml
+vhn.xml.p7s
+pruefvermerk.pdf
+pruefvermerk.xml
+xjus.z_nachricht.xml
+Element Ereignis im
+Nachrichtenkopf: 289,
+Weiterleitung einer
+Nachricht
+
+23
+
+6.5.3
+
+XJustiz-Nachricht für die Weiterleitungsnachricht
+
+Die Elemente Nachrichtenkopf und Schriftgutobjekte sind Pflichtelemente.
+Grunddaten sollen nicht angegeben werden.
+Nachrichtenkopf
+Im Nachrichtenkopf dieser Nachricht ist im Element Ereignis der Wert 289 "Weiterleitung einer Nachricht" zu verwenden. Als Absender ist derjenige anzugeben, der die Nachricht weiterleitet. Als Empfänger ist der Adressat, an den die Nachricht weitergeleitet werden soll, anzugeben.
+Sofern in der XJustiz-Nachricht der ursprünglichen Nachricht für die Elemente Sendungspriorität und
+Vertraulichkeit Angaben enthalten sind, sind diese in die XJustiz-Nachricht der Weiterleitungsnachricht zu übernehmen.
+Schriftgutobjekte
+Im Type.GDS.Schriftgutobjekt darf der Type.GDS.Dokument nur einmal vorkommen.
+Er muss folgende Informationen erhalten:
+•
+
+Element Identifikation: UUID
+
+•
+
+Sequenz xjustiz.fachspezifischeDaten, Element Dokumentenklasse: 014 Technische Information
+
+•
+
+Sequenz Datei:
+Die Elemente Dateiname und Bestandteiltyp müssen wie folgt angegeben werden:
+Dateiname der ursprünglichen
+
+Bestandteiltyp
+
+Bestandteiltyp
+
+Nachricht
+
+XJustiz 3.4
+
+XJustiz 3.5
+
+xjustiz_nachricht_UUIDa.xml
+
+001, Original
+
+pruefvermerk_UUIDb.pdf
+
+010, Prüfvermerk
+
+pruefvermerk_UUIDc.xml
+
+010, Prüfvermerk
+
+vhn_UUIDd.xml
+
+009, Fachliches
+
+011, VHN
+
+Metadatum
+vhn_UUIDd.xml.p7s
+
+003, Signaturdatei
+
+Für die Signaturdatei des VHN (vhn_UUIDd.xml.p7s ) ist im Element dateiname.bezugsdatei
+der Dateiname des VHN (= vhn_UUIDd.xml) anzugeben.
+
+24
+
+7
+
+XJustiz
+
+Dank der maschinenlesbaren strukturierten Daten im XJustiz-Format können Nachrichteninhalte automatisiert an die richtigen IT-Systeme der Beteiligten ausgesteuert oder an den richtigen Bearbeiter
+weitergeleitet werden. Darüber hinaus ermöglicht XJustiz, möglichst viele der Daten, welche der Absender bereits erfasst hat, automatisiert in die IT-Systeme der Empfänger zu übernehmen. Der Standard wird von der Bund-Länder-Kommission für Informationstechnik in der Justiz (BLK) herausgegeben und ist frei verfügbar. Einzelheiten sind auf www.xjustiz.de sowie im XRepository, veröffentlicht.
+Einmal jährlich wird eine neue XJustiz-Version gültig. Sie löst die bis dahin gültige Version ab. XJustizVersionen werden immer 12 Monate vor Gültigkeit auf www.xjustiz.de veröffentlicht.
+Für die Weiterentwicklung des XJustiz-Standards sind Prozesse abgestimmt worden. Für die Beantragung von Erweiterungen des Standards steht auf https://xjustiz.justiz.de/index.php ein Formular bereit.
+Im XJustiz-Standard27 ist in Form eines Schemas beschrieben, welche Inhaltsdaten in welcher Struktur
+in einer XJustiz-Nachricht enthalten sein können oder müssen.
+Hierfür sind für die verschiedenen fachlichen Kommunikationsanlässe sogenannte XJustiz-Nachrichten vorgesehen.
+Für die einzelnen Daten jeder XJustiz-Nachricht ist im XJustiz-Standard geregelt,
+•
+•
+•
+
+welcher Datentyp (Text, Zahl, Werteliste, Ja/Nein) zu verwenden ist,
+wie häufig er vorkommen darf (kann/muss/einmal/n-mal)
+und an welcher Stelle er übermittelt werden soll (Schema).
+
+Die XJustiz-Nachricht trägt immer den Dateinamen „xjustiz_nachricht.xml“. So kann sie nach dem
+Empfang der Nachricht automatisiert als strukturierter Datensatz erkannt und der Inhalt in die IT-Systeme der Beteiligten übernommen werden.
+Für die jeweiligen fachlichen Kommunikationsanlässe im ERV sind im XJustiz-Standard sogenannte
+XJustiz-Nachrichten vorgesehen. Dabei wird zwischen den fachübergreifenden Nachrichten „Basisnachricht“ und „Übermittlung Schriftgutobjekte“ sowie den Fachnachrichten unterschieden.
+
+27 XJustiz ist ein XÖV-Standard (https://www.xoev.de/xoev_rahmenwerk-4987).
+
+25
+
+Welche XJustiz-Fachnachrichten in den speziellen Fachbereichen zu verwenden sind, ist überblicksweise in Kapitel 8 zusammengetragen. Einzelheiten zu den verschiedenen XJustiz-Fachnachrichten
+sind in der XJustiz-Spezifikation aufgeführt.
+Für die Übermittlung von elektronischen Dokumenten an die ordentliche Gerichtsbarkeit, Sozialgerichte, Verwaltungsgerichte, Arbeitsgerichte und Finanzgerichte ist in der ERVB geregelt, dass die
+XJustiz-Nachricht „uebermittlungSchriftgutobjekte“ in der jeweils gültigen XJustiz-Version zu verwenden ist. Sie soll auch bei der Übermittlung von Akten an die Gerichte genutzt werden.
+Für das rücklaufende eEB ist die XJustiz-Nachricht „eeb.zuruecklaufend“ zu verwenden. Einzelheiten
+sind im Kapitel 7.2 dargestellt.
+In diesem Dokument wird ausschließlich auf die Nachrichten „uebermittlungSchriftgutobjekte“28 und
+eeb.zuruecklaufend Bezug genommen.
+7.1
+
+XJustiz-Nachricht „uebermittlungSchriftgutobjekte“
+
+Da bei der Gestaltung der Nachricht „nachricht.gds.uebermittlungSchriftgutobjekte.0005005“ auf die
+Allgemeingültigkeit der einzelnen Daten geachtet und auf die Aufnahme spezieller, fachspezifischer
+Daten verzichtet wurde, ist sie auch für den Dokumenten- und Aktenaustausch zwischen anderen Beteiligten, wie z.B. zwischen Behörden und Rechtsanwälten, geeignet.
+Die Nachricht „uebermittlungSchriftgutobjekte“ enthält immer einen Nachrichtenkopf und Schriftgutobjekte. Sie kann zusätzlich auch Grunddaten enthalten.29
+•
+
+28
+
+Nachrichtenkopf
+Alle XJustiz-Nachrichten enthalten einen sogenannten Nachrichtenkopf. Der Nachrichtenkopf
+enthält allgemeine Daten zur Sendung. Hierzu gehören Angaben zu Absender und Empfänger, eine Nachrichten-ID sowie der Erstellungszeitpunkt als Pflichtangaben. Darüber hinaus
+sind u.a. die Aktenzeichen von Absender und Empfänger, der Kommunikationsanlass und Angaben zur Sendungspriorität im Nachrichtenkopf enthalten.
+Das Element „nachrichtenuebergreifenderProzess“ findet nur für den justizinternen Datenaustausch und für die Kommunikation mit den Archiven Verwendung. Für Nachrichten, die
+
+nachricht.gds.uebermittlungSchriftgutobjekte.0005005 gemäß XJustiz-Spezifikation
+
+29 XJustiz-Nachrichten für spezielle fachliche Kommunikationsanlässen können darüber hinaus Fachdaten enthalten. Fach-
+
+daten beschreiben Informationen, die in einem konkreten fachlichen Kontext, wie z.B. Angaben zum Bußgeldbescheid in
+Ordnungswidrigkeitssachen, benötigt werden.
+
+26
+
+Personen oder Organisationen, die an den Verfahren beteiligt sind (Verfahrensbeteiligte, Dolmetscher, Sachverständige, …), an die Gerichte oder Staatsanwaltschaften versenden, darf es
+nicht genutzt werden.
+•
+
+•
+
+•
+
+Grunddaten
+Die Grunddaten enthalten Informationen zum jeweiligen Verfahren und zu den Beteiligten.
+Sie sind nicht fachspezifisch und deshalb für alle Kommunikationsszenarien relevant.
+Fachdaten
+Fachdaten beschreiben Informationen, die in einem konkreten fachlichen Kontext benötigt
+werden. In Ermittlungs- bzw. Strafverfahren handelt es sich dabei z.B. um Informationen zum
+Bußgeldbescheid oder zum Zeitpunkt der Ordnungswidrigkeit.
+Schriftgutobjektdaten (SGO-Daten)
+SGO-Daten beschreiben Schriftgut (Akten, Teilakten oder Dokumente) näher. Sie dienen einerseits zur (teil)automatischen Übernahme der Anhänge einer elektronischen Nachricht in
+die Systeme der Kommunikationspartnerinnen bzw. -partner und sind andererseits notwendig, um die übersendeten Dateien zueinander in Beziehung zu setzen.
+
+In einer XJustiz-Nachricht können somit nachfolgende Informationen zur EGVP-Nachricht enthalten
+sein:
+Nachrichtenkopf à
+
+Wer schickt die EGVP-Nachricht aus welchem Anlass an wen?
+Angaben zu Absender und Empfänger, jeweilige Aktenzeichen, Anlass der
+Sendung, ggf. Sendungspriorität u.a.
+
+Grunddaten à
+
+Welches Verfahren führen Absender und Empfänger zu dem Übermittlungsvorgang?
+Angaben zum Verfahren, wie z.B. Verfahrensgegenstand, Sachgebiet, Kurzrubrum
+Welche natürlichen oder juristischen Personen sind beteiligt?
+Angaben zu beteiligten Personen, wie Kläger, Beklagter, Zeuge, Gutachter
+
+Schriftgutobjekt- à
+
+Welche Akten/Dokumente sind Bestandteil der Übermittlung?
+
+Daten
+
+Angaben zu Schriftsätzen oder zur Akte, wie z.B. Datum des Dokumentes,
+Reihenfolge der Dokumente, Dokumentenart, Dateinamen
+
+7.1.1
+
+Wie können Daten innerhalb einer XJustiz-Nachricht verknüpft werden?
+
+In den Grunddaten werden Verfahrensdaten sowie Daten zu den Beteiligten angegeben. Die Verfahrensdaten werden dabei immer für jede Station, die ein Vorgang durchlaufen hat, gesondert angegeben. In den Schriftgutobjekten können Akten mit einer bzw. einem in den Grunddaten aufgeführten
+Beteiligten verknüpft werden. Hierfür muss für die einzelnen Beteiligten in den Grunddaten eine Be27
+
+teiligtennummer angegeben werden. Diese Beteiligtennummer wird bei den Angaben zur Akte verwendet, um die Akte mit dieser bzw. diesem Beteiligten zu verknüpfen (Element „Person“, Datentyp
+„Type.GDS.Ref.Beteiligtennummer“).
+
+7.1.2
+
+Wie können XJustiz-Nachrichten beim Empfänger den richtigen Vorgängen/Beteiligten zugeordnet werden?
+
+Für die Zuordnung zum Verfahren der Kommunikationspartner werden die jeweiligen Aktenzeichen
+im Nachrichtenkopf der XJustiz-Nachrichten übermittelt.
+7.2
+
+XJustiz-Nachricht „rücklaufendes eEB“
+
+Für die Bezugnahme oder Rückantwort auf eine bestimmte XJustiz-Nachricht, die im Kommunikationsprozess zwischen den Kommunikationspartnern zuvor ausgetauscht wurde, sind im Nachrichtenkopf die Elemente „eigeneNachrichtenID“ und „fremdeNachrichtenID“ vorgesehen.
+Das Referenzieren auf eine XJustiz-Nachricht des Absenders wird derzeit nur für die Rücksendung des
+eEB verwendet.
+Sofern bei der Rückantwort, wie beim rücklaufenden elektronischen Empfangsbekenntnis, auf eine
+empfangene XJustiz-Nachricht Bezug genommen werden soll, wird die ID, die dort als „eigeneNachrichtenID“ angegeben wurde, im Element „fremdeNachrichtenID“ zurück übermittelt.
+
+28
+
+Der Absender des rücklaufenden eEBs wird im Nachrichtenkopf der Nachricht „rücklaufendes eEB“
+angegeben. Zudem wird das Datum, an dem die Nachricht empfangen wurde, eingetragen. Sofern
+der Empfang nicht bestätigt werden soll, muss ein Grund angegeben werden (siehe Kapitel 7.2.4).
+Nachfolgend sind die verschiedenen Konstellationen für die Abgabe eines eEB zusammengetragen.
+Einzelheiten zu den Elementen der Nachricht sind in der Anlage enthalten.
+7.2.1
+
+Der Zustellungsempfänger gibt das eEB ab
+
+Der angegebene Empfänger der eEB-Anforderung erstellt das rücklaufende eEB selbst. Der Empfänger, der in der XJustiz-Nachricht des hinlaufenden eEBs angegeben ist (= Zustellungsempfänger), ist
+im rücklaufenden eEB als Absender aufzuführen.
+Beispiel:
+
+29
+
+7.2.2
+
+Ein abweichender Zustellungsempfänger gibt das eEB ab (bei Behörde o.ä.)
+
+In diesem Szenario weicht der adressierte Zustellungsempfänger (Empfänger, der in der XJustiz-Nachricht der eEB-Anforderung angegeben ist) von der Person, die das eEB abgibt, ab. Der abweichende
+Zustellungsempfänger muss als Absender im rücklaufenden eEB angegeben werden. Das Szenario ist
+beispielsweise einschlägig, wenn als Zustellungsempfänger keine natürliche Person, sondern eine Behörde angegeben ist.
+
+7.2.3
+
+Ein abweichender Zustellungsempfänger gibt das eEB als Vertreter ab
+
+Das eEB kann von einem Vertreter des adressierten Zustellungsempfängers (Empfänger, der in der
+XJustiz-Nachricht des hinlaufenden eEB angegeben ist) abgegeben werden. In diesem Fall muss der
+abweichende Zustellungsempfänger als Absender im rücklaufenden eEB angegeben werden. Zusätzlich muss „Ja“ im Element „Zustellungsempfänger abweichend“ angegeben werden.
+
+30
+
+7.2.4
+
+Das eEB wird nicht abgegeben:
+
+Sofern der Zustellungsempfänger des angeforderte eEB das Empfangsbekenntnis nicht abgeben
+möchte, muss er einen der vorgegebenen Gründe angeben.
+
+Als Gründe stehen zur Auswahl:
+•
+•
+•
+
+Zustellungsempfänger nicht am Verfahren beteiligt
+Inhalt der Sendung unklar oder unvollständig
+Signaturprüfung der übermittelten Dokumente fehlgeschlagen
+
+Er kann eine nähere Erläuterung, warum das eEB nicht abgegeben wurde, angeben.
+
+7.3
+
+Austausch von Schriftgutobjekten
+
+Mit einer EGVP-Nachricht kann die in der ERVB geregelte Anzahl von Anhängen (Dateien) übermittelt
+werden. Die Anhänge werden von den EGVP Sende- und Empfangskomponenten im Regelfall alphabetisch sortiert, so dass eine fachliche Reihenfolge nicht gebildet werden kann. Die Anlagen müssen
+deshalb für die Bearbeitung beim Empfänger aufbereitet werden.
+Alle Informationen, die für diese Aufbereitung der unsortierten Anlagen einer EGVP-Nachricht erforderlich sind, werden in den Schriftgutobjektdaten der beigefügten XJustiz-Nachricht übermittelt.
+Hinweis: Sollte die Aufnahme von Daten zu den Schriftgutobjekten in die XJustiz-Nachricht
+ausnahmsweise nicht (bzw. vorübergehend noch nicht) möglich sein, wird darum gebeten,
+die Reihenfolge der Anhänge durch Hinzufügen einer fortlaufenden Nummerierung in den
+
+31
+
+Dateinamen zu kennzeichnen. In diesem Sinne ist auch die Regelung in Ziffer 6.c.ee der ERVB
+vom 10.02.2022 zu verstehen.
+Das Element „justizinterneDaten“ findet nur für den justizinternen Datenaustausch und für die Kommunikation mit den funktionalen Staatsanwaltschaften Verwendung. Für Nachrichten, die Personen
+oder Organisationen, die an den Verfahren beteiligt sind, an die Gerichte oder Staatsanwaltschaften
+versenden, darf es nicht genutzt werden.
+Sofern einzelne Dokumente übermittelt werden, werden diese in den Schriftgutobjektdaten im Container „Dokumente“ aufgeführt. Dabei muss im Element „Dokumentklasse“ zwingend der fachlich
+einschlägige Wert aus der Werteliste ausgewählt werden.
+Sofern eine Akte übergeben wird, werden die Informationen zu dieser Akte und die Dokumente dieser Akte im Container „Akte“ aufgeführt.
+
+Schri&gutobjekte
+
+Anschreiben
+
+Akte
+
+Dokument1
+Datei
+Datei
+
+Dokument2
+Datei
+
+Dokument
+Datei
+Datei
+
+Sofern eine Akte aus Teilakten besteht, werden die Informationen zu dieser Teilakte und die Dokumente dieser Teilakte im Container „Teilakte“ aufgeführt. Teilakten können nur innerhalb eines Akten-Containers und eines anderen Teilaktencontainers aufgeführt werden.
+Eine Akte kann dabei aus Dokumenten und/oder aus Teilakten bestehen.
+Ein Dokument muss aus mindestens einer und kann aus mehreren Dateien bestehen.
+32
+
+Schri&gutobjekte
+
+Anschreiben
+
+Akte
+Teilakte 1
+
+Dokument1
+Datei
+Datei
+
+Dokument2
+Datei
+
+Teilakte 2
+Dokument1
+Datei
+
+Das Dokument, welches das Anschreiben enthält, wird gesondert gekennzeichnet.
+7.3.1
+
+Wie wird das Anschreiben gekennzeichnet?
+
+Das Anschreiben beschreibt ein Dokument, das dem Empfänger zur Erläuterung der Sendung beigefügt wird. Sofern es von der Behörde vor dem Versand veraktet wurde, wird es als Teil der Akte übermittelt. Andernfalls wird es als zusätzliches Dokument übermittelt. Das Anschreiben muss deshalb
+entweder im Container „Akte“ oder im Container „Dokumente“ aufgeführt werden.
+Um das Anschreiben maschinell erkennen zu können, muss es zusätzlich im Container „Anschreiben“
+referenziert werden. Hierfür wird die UUID, die für das Anschreiben im Element „Type.GDS.Xdomea.IdentifikationObjektType“ angegeben ist, im Element „ref.sgo“ im Container „Anschreiben“ aufgeführt.
+Vorbereitende Schriftsätze und deren Anlagen, schriftlich einzureichende Anträge und Erklärungen
+der Parteien sowie schriftlich einzureichende Auskünfte, Aussagen, Gutachten, Übersetzungen und
+Erklärungen (siehe § 130a Abs. 1 ZPO) werden üblicherweise nicht vor dem Versand in der Behördenakte veraktet und werden deshalb im Container „Dokumente“ aufgeführt. Da es sich bei diesen Dokumenten nicht um Erläuterungen der Sendung handelt, sollen sie nicht als Anschreiben gekennzeichnet werden.
+
+33
+
+SGO
+
+Anschreiben
+
+Ref.SGO:12345678
+
+Akte
+
+Dokument1
+
+Dokument2 (Anschreiben)
+ID 12345678
+
+7.3.2
+
+Wie wird die Reihenfolge der übermittelten Dokumente gekennzeichnet?
+
+Für die Angabe der Reihenfolge der übermittelten Dokumente steht das Element „nummerImUebergeordnetenContainer“ zur Verfügung.30 Die Reihenfolge wird dabei immer für den jeweiligen Container, in dem die Dokumente aufgeführt sind, angegeben.
+Die Nummer im übergeordneten Container beginnt in jedem Container mit der Nummer 1.
+Auslassungen sind nicht zulässig. Da es sich bei den XJustiz-Daten lediglich um Hilfsdaten handelt,
+können rechtlich relevante Aussagen, wie z.B. zur Vollständigkeit einer Akte, nicht etwaigen Metadaten entnommen werden.
+
+30
+
+Die Angabe der Nummerierung im Dateinamen ist durch die Verwendung von XJustiz nicht mehr erforderlich.
+
+34
+
+Akte
+Teilakte
+nummerImUebergeordnetenContainer: 1
+Teilakte
+nummerImUebergeordnetenContainer: 1
+Dokument
+nummerImUebergeordnetenContainer: 1
+Teilakte
+nummerImUebergeordnetenContainer: 2
+Dokument
+nummerImUebergeordnetenContainer: 1
+Dokument
+nummerImUebergeordnetenContainer: 2
+Dokument
+nummerImUebergeordnetenContainer: 3
+Dokument
+nummerImUebergeordnetenContainer: 3
+Dokument
+nummerImUebergeordnetenContainer: 4
+Dokument
+nummerImUebergeordnetenContainer: 2
+Dokument
+nummerImUebergeordnetenContainer: 3
+
+7.3.3
+
+Wie können Akteninhalte zitiert werden?
+
+Sofern die Paginierungsinformation auf den übermittelten Repräsentaten aufgebracht ist (siehe
+5.4.2), kann diese für die Zitierung zwischen den Verfahrensbeteiligten genutzt werden. Andernfalls
+kann auf das Datum, ggf. den Verfasser und die Seitenzahl der Einzeldokumente Bezug genommen
+werden.
+7.3.4
+
+Wie wird gekennzeichnet, dass es sich bei einem Dokument um ein Scanprodukt handelt?
+
+Für die Kennzeichnung eingescannter Dokumente steht im Container „Dokument“ das Element
+„scanDatum“ zur Verfügung. Mit Angabe des Datums, an dem das Dokument eingescannt wurde,
+wird grundsätzlich auch mitgeteilt, dass es sich um ein eingescanntes Dokument handelt. Zusätzlich
+kann mit dem Element „ersetzenderScan“ gekennzeichnet werden, dass das Dokument ersetzend
+eingescannt wurde.
+
+35
+
+7.3.5
+
+Wie wird gekennzeichnet, dass mehrere Dateien zusammen ein Dokument bilden?
+
+Für jedes Dokument können im Typ „Type.GDS.Dokument“ beliebig viele Dateien angegeben werden.
+Zu jeder Datei muss im Element „Bestandteil“ angegeben werden, um welchen Typ es sich bei der
+Datei handelt.
+Zwischen folgenden Typen kann ausgewählt werden:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Original31
+Repräsentat (PDF/A-Version, darf nur einmal vorkommen)
+Signaturdatei
+Signaturprüfprotokoll
+Prüfvermerk
+Transfervermerk
+VHN
+Hinlaufendes eEB.
+
+Beschreibungen dieser Typen sind im XJustiz-Standard (ab Version 3.5) in der Codeliste „GDS.Bestandteiltyp“ enthalten.
+Sofern Signaturdateien übermittelt werden, müssen sie über das Element „dateiname.bezugsdatei“
+mit der signierten Datei verbunden werden.
+Für jedes Dokument darf dabei nur ein Original und nur ein Repräsentat übermittelt werden. Zudem
+darf ein- und dieselbe Datei nur einmal in der XJustiz-Nachricht vorkommen.
+Da bei der Übersendung von Akten im Regelfall die Repräsentate der Dokumente und nur auf Anforderung der Gerichte die Ausgangsdokumente übergeben werden sollen, sind die Werte „Repräsentat“ und „Signaturprüfprotokoll“ bzw. „Prüfvermerk“ zu verwenden.
+
+31
+
+Sofern zusätzlich zu einem PDF-Dokument auch noch ein TIFF-Dokument übermittelt wird, sind sie jeweils als gesondertes Dokument mit dem Bestandteiltyp „Original“ anzugeben.
+
+36
+
+Akte
+
+Dokument1
+
+Datei 1, Bestandteiltyp
+Repräsentat
+
+Datei 2, Bestandteiltyp
+Signaturprüfprotokoll
+
+Dokument2
+
+Datei 1, Bestandteiltyp
+Repräsentat
+
+Die Werteliste sieht noch den Wert „signierte Vorversion“ vor. Dieser Wert ist jedoch nicht relevant.
+7.3.6
+
+Wie wird ein fachlicher Zusammenhang zwischen mehreren Dokumenten gekennzeichnet?
+
+Über das Element „Verweis“ im Container „Dokument“ kann für ein Dokument eine fachliche Verknüpfung mit einem anderen Dokument, das ebenfalls übermittelt wird, erfolgen. Dabei ist stets vom
+untergeordneten auf das übergeordnete Schriftgutobjekt zu verweisen (z.B. von einer Anlage auf einen Schriftsatz, von einem Berichtigungsbeschluss auf das Urteil). Zudem kann angegeben werden,
+ob es sich um eine untrennbare Verbindung, eine Anlage oder eine einfache Verbindung handelt.
+7.3.7
+
+Wie kann erkannt werden, dass ein Dokument bereits übermittelt wurde?
+
+Sofern ein Dokument, z.B. bei der Übersendung einer inzwischen fortgeschriebenen Behördenakte,
+erneut übermittelt wird, soll es im Element „Identifikation/ID“ die gleiche UUID wie bei der ersten
+Übermittlung erhalten. Auf diese Weise kann der Empfänger durch Vergleich der UUIDs erkennen, ob
+das Dokument bereits übermittelt wurde. Sofern ein Dokument inhaltlich geändert wurde, muss es
+eine neue ID erhalten, da es sich dann um ein anderes Dokument handelt.
+
+37
+
+8
+
+Fachspezifische Kommunikationsszenarien
+
+8.1
+
+Mahnverfahren
+
+Im Automatisierten Mahnverfahren muss unterschieden werden zwischen
+a) maschinell lesbaren Daten nach § 702 Abs. 2 S. 1 ZPO und
+b) anderen Anträgen, Schriftsätzen, usw.
+Für die maschinell lesbaren Daten nach lit. a gelten besonderen Formate, die die Länder im Verbund
+als „Konditionen zur Teilnahme am elektronischen Datenaustausch“ veröffentlichen (vgl.
+https://www.mahngerichte.de/publikationen/eda-konditionen/).
+Antrags- (und Nachrichten-) -daten, die als maschinell lesbare Strukturdaten ausgetauscht werden
+sollen, müssen dem dort spezifizierten Aufbau entsprechen. Dabei kann eine physische Antragsdatei
+bis zu 32.768 logische Anträge enthalten. Die physische Antragsdatei ist als Anhang zur Nachricht im
+elektronischen Rechtsverkehr zu übermitteln, die ERVV gilt nicht. Alle zugelassenen Übermittlungswege werden unterstützt.
+Für alle anderen Anträge, Schriftsätze etc. gelten die in den übrigen Kapiteln beschriebenen, allgemeinen Regeln des elektronischen Rechtsverkehrs.
+8.2
+
+Bußgeldverfahren
+
+Die Bußgeldbehörden verwenden für die Übermittlung von Nachrichten das besonderes Behördenpostfach (beBPo). Für die Übersendung von Dokumenten und Akten gelten die in diesem Leitfaden
+beschriebenen Grundsätze.
+Für die Übermittlung strukturierter Daten im Bußgeldverfahren stehen gesonderte XJustiz-Nachrichten zur Verfügung, die verwendet werden müssen.
+Für den Fall, dass bei der Abgabe von Akten auch die Aktenführungsbefugnis auf den Empfänger
+übergeht, gelten folgende Vorgaben:
+•
+
+Sofern die Justiz ihre Akte mit Übergabe der Aktenführungsbefugnis an die Bußgeldbehörde
+übermittelt, enthält die EGVP-Nachricht die Akte/Teilakten in Form der einzelnen Ursprungsdateien einschließlich etwaiger Signaturdateien sowie die Repräsentate der Dokumente im
+PDF-Format. Dabei werden zu jedem Dokument auch etwaige Signaturprüfergebnisse übermittelt.
+
+•
+
+Sofern die Aktenführungsbefugnis nicht übergeht, werden in jedem Fall die Repräsentate der
+Dokumente im PDF-Format übermittelt. Gegebenenfalls werden auch die Ursprungsdokumente übermittelt.
+38
+
+•
+
+Die Bußgeldbehörde übermittelt selbsterstellte elektronische Dokumente an die Justiz immer
+im PDF/A-Format. In bestimmten Fällen kann das elektronische Ausgangsdokument zusätzlich auch im Ausgangsformat (z.B. Excel) übermittelt werden. Dies gilt immer dann, wenn die
+Umwandlung technisch nicht möglich ist oder die Inhalte des Dokumentes nicht ohne Informationsverlust in das PDF/A-Format übertragen werden können (z.B. audiovisuelle Dateien).
+Ein entsprechender Hinweis ist zur Akte zu nehmen.
+Dokumente Dritter werden von der Bußgeldstelle in das PDF/A-Format übertragen und an
+die Justiz übermittelt. Zusätzlich wird immer dann, wenn die Aktenführungsbefugnis auf die
+Justiz übergeht, auch das elektronische Ausgangsdokument selbst in seinem ursprünglichen
+Format einschließlich etwaiger Signaturdateien und Prüfergebnisse übermittelt.
+
+•
+
+Auf Repräsentaten angebrachte irreversible Markierungen, Stempel, Kommentare und handschriftlichen Notizen müssen mit übermittelt werden.
+
+Fachliche Rahmenbedingungen sind in der Anlage unter 9.2 zusammengetragen.
+Für die Übermittlung strukturierter Daten im Bußgeldverfahren stehen gesonderte XJustiz-Nachrichten zur Verfügung, die verwendet werden müssen.
+Nachfolgend sind die verschiedenen Kommunikationsszenarien aufgeführt. Dabei ist jeweils angegeben, ob bei dem Kommunikationsanlass auch Schriftgutobjekte zu übermitteln sind, welche XJustizNachricht zu verwenden ist und welcher Wert im Element „Ereignis“ im Nachrichtenkopf anzugeben
+ist.
+Darüber hinaus wurde eine Anlage erstellt, in der zu jeder XJustiz-Nachricht angegeben ist, welche
+Werte in welcher Form erwartet werden (2025_01_30_ERV_ Profilierung_XJustiz_Nachrichten_Bussgeldsachen_XJustiz_3_5.xlsx)
+8.2.1
+
+Kommunikation von der Bußgeldbehörde zur Justiz
+
+Der Grund der Nachrichtenübermittlung wird im Anschreiben angegeben. Zusätzlich wird im Nachrichtenkopf der XJustiz-Nachricht im Element „ereignis“ der Anlass der Übermittlung aufgeführt, damit automatisiert erkannt werden kann, ob ein Bußgeldverfahren oder ein Strafverfahren angelegt
+werden muss. Für das Element „ereignis“ steht eine Werteliste bereit.
+
+39
+
+Nr.
+
+Kommunikationsanlass
+
+Beschreibung
+
+Inhalt der Nachricht
+
+BBJ1
+
+Rechtsbehelfsabgabe (§
+
+Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+69 Abs. 3 OWiG)
+
+übermittelt die Rechts- lung.externAnJustiz.0500010
+behelfsabgabe an die
+
+116, Neueingang OWi
+
+STA
+BBJ2
+
+Abgabe als Straftat an
+
+Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+die Staatsanwaltschaft (§ übermittelt die Abgabe lung.externAnJustiz.0500010
+
+BBJ3
+
+41 OWiG)
+
+als Straftat an die STA
+
+Antrag auf gerichtliche
+
+Die Bußgeldbehörde
+
+Entscheidung (z.B. § 25a
+
+beantragt eine gericht- lung.externAnJustiz.0500010
+
+StVG)
+
+liche Entscheidung bei
+
+Unterscheidung zwi-
+
+115, Neueingang
+nachricht.straf.owi.verfahrensmittei-
+
+115, Neueingang
+
+Gericht
+
+schen Kostenbescheid §
+25a StVG, § 62 OWiG,
+103 OWiG
+BBJ4
+
+Antrag auf Erzwingungs-
+
+Die Bußgeldbehörde
+
+haft gemäß § 96 OWiG
+
+beantragt Erzwingungs- lung.externAnJustiz.0500010
+haft bei Gericht
+
+BBJ5
+
+nachricht.straf.owi.verfahrensmittei-
+
+117, Neueingang E-Haft
+
+Anträge nach § 98 OWiG Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+(Antrag auf Umwandlung beantragt eine Um-
+
+lung.externAnJustiz.0500010
+
+einer Geldbuße in die Er- wandlung einer Geld-
+
+115, Neueingang
+
+bringung einer bestimm- buße bei Gericht
+ten Leistung wie z. B. einer Arbeitsauflage (Jugendliche/Heranwachsende)
+BBJ6
+
+Nachträgliche Zahlungs-
+
+Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+mitteilungen
+
+übermittelt eine nach-
+
+lung.externAnJustiz.0500010
+
+trägliche Zahlungsmit-
+
+121, Nachträgliche Mitteilung
+
+teilung an das Gericht
+40
+
+Nr.
+
+Kommunikationsanlass
+
+Beschreibung
+
+Inhalt der Nachricht
+
+oder die STA (je nach
+Aktenstandort)
+BBJ7
+
+Nachträgliche Stornie-
+
+Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+rungen zu Zahlungsmit-
+
+storniert eine Über-
+
+lung.externAnJustiz.0500010
+
+teilungen
+
+mittlung der nachträgli-
+
+121, Nachträgliche Mitteilung
+
+che Zahlungsmitteilung
+an das Gericht oder die
+STA (je nach Aktenstandort)
+BBJ8
+
+Nachträgliche Rück-
+
+Die Bußgeldbehörde
+
+nachricht.straf.owi.verfahrensmittei-
+
+nahme
+
+zieht den Antrag ge-
+
+lung.externAnJustiz.0500010
+
+genüber dem Gericht
+
+215, Rücknahme Antrag/Schreiben
+
+oder der STA (je nach
+Aktenstandort) nachträglich zurück
+BBJ9
+
+Aktenzeichenmitteilung
+
+Die Bußgeldbehörde
+
+nachricht.straf.aktenzeichenmittei-
+
+übermittelt das Akten-
+
+lung.0500002
+
+zeichen
+BBJ10
+
+Übermittlung von Dokumenten
+
+Die Bußgeldbehörde
+übermittelt neu einge-
+
+nachricht.gds.uebermittlungSchriftgutobjekte.0005005
+
+gangene oder angeforderte Dokumente oder
+Ergebnisse etwaiger
+Nachermittlungsaufträge an die Justiz.
+
+41
+
+8.2.2
+
+Kommunikation von der Justiz zur Bußgeldbehörde
+
+Nr.
+
+Kommunikationsanlass
+
+Beschreibung
+
+Inhalt der Nachricht
+
+JBB1
+
+Aktenabgabe
+
+Diese Nachricht wird
+
+nachricht.straf.owi.verfahrensmittei-
+
+von der Staatsanwalt-
+
+lung.externAnJustiz.0500010
+
+schaft an die Bußgeld-
+
+141, Aktenabgabe
+
+behörde übermittelt,
+wenn die Einstellung
+einer Straftat und die
+Abgabe zur Verfolgung
+als Ordnungswidrigkeit
+(§ 43 OWiG) erfolgte.
+JBB2
+
+Mitteilung des Verfah-
+
+Die Justiz übermittelt
+
+rensausgang bei Ein-
+
+den Verfahrensausgang lung.justizAnExtern.0500011
+
+spruch mit gerichtlicher
+
+bei Einspruch mit ge-
+
+Entscheidung.
+
+richtlicher Entschei-
+
+z.B. Geldbuße + Fahrverbot
+JBB3
+
+nachricht.straf.owi.verfahrensmittei-
+
+034, Ergebnismitteilung
+
+dung an die Bußgeldbehörde
+
+Mitteilung des Verfah-
+
+Die Justiz übermittelt
+
+nachricht.straf.owi.verfahrensmittei-
+
+rensausgangs nach Ein-
+
+den Verfahrensausgang lung.justizAnExtern.0500011
+
+spruch wegen Einstel-
+
+nach Einspruch wegen
+
+lung, oder Einspruchs-
+
+Einstellung oder Ein-
+
+rücknahme oder Todes
+
+spruchsrücknahme
+
+034, Ergebnismitteilung
+
+oder Todes
+JBB4
+
+Verfahrensausgangsmit-
+
+Die Justiz übermittelt
+
+verfahrensmitteilung.justizAnEx-
+
+teilung bei Erzwingungs-
+
+den Verfahrensausgang tern.0500011
+
+haft bzw. Antrag § 98 O-
+
+bei Erzwingungshaft
+
+034, Ergebnismitteilung
+
+WiG
+JBB5
+
+Übermittlung von Doku-
+
+Die Justiz übermittelt
+
+nachricht.gds.uebermittlungSchrift-
+
+menten
+
+neu eingegangene Do-
+
+gutobjekte.0005005
+
+kumente an die Bußgeldbehörde.
+42
+
+Nr.
+
+Kommunikationsanlass
+
+Beschreibung
+
+Inhalt der Nachricht
+
+JBB6
+
+Aktenzeichenmitteilung
+
+Die Justiz übermittelt
+
+nachricht.straf.aktenzeichenmittei-
+
+das Aktenzeichen
+
+lung.0500002
+
+8.3
+
+Handels-, Genossenschafts- und Partnerschaftsregistersachen
+
+In den Handels-, Genossenschafts- und Partnerschaftsregistersachen gelten nicht die allgemeinen
+Vorschriften, insbesondere nicht die Formvorschriften der Elektronischer-Rechtsverkehr-Verordnung
+(ERVV). Hier sind die in den einzelnen Bundesländern erlassenen Rechtsverordnungen vorrangig zu
+beachten. Eine Übersicht der Verordnungen wird von der Bundesnotarkammer unter
+https://www.elrv.info/elektronischer-rechtsverkehr/uebersicht-verordnungen geführt.
+8.4
+
+Zentrales Schutzschriftenregister
+
+Im Zentralen Schutzschriftenregister ist ein maschinell lesbarer Datensatz nach den Vorschriften des
+§ 2 i.V.m. § 1 SRV zu übermitteln. Dieser einheitlich strukturierte Datensatz sollte mindestens die Angaben nach § 1 Abs. 2 Nr. 1 und 2 enthalten.
+Eine vom Register als gültig akzeptierte Einreichung besteht mindestens aus einem Primärdokument
+– dem eigentlichen Schutzschriftendokument in einem der zugelassenen Dateiformate – sowie dem
+für die automatische Datenverarbeitung maßgebliche XJustiz-Datensatz.
+Der XJustiz-Datensatz enthält alle Strukturdaten zur Einreichung und ist somit für das Auffinden innerhalb des Zentralen Schutzschriftenregisters maßgeblich. Die Qualität der eingereichten Daten
+liegt in der alleinigen Verantwortung der einreichenden Person. Innerhalb der OSCI-Nachricht muss
+der XJustiz-Datensatz zwingend den Dateinamen „xjustiz_nachricht.xml“ tragen. Möglich ist eine Einreichung nur mit dem jeweils gültigen XJustiz-Datensatz, welcher unter http://www.zssr.justiz.de/
+bereitgestellt wird. Der über beA erzeugbare XJustiz-Datensatz ist hier ausdrücklich nicht gültig.
+Grundlage der automatisierten Datenverarbeitung ist ein strukturierter XML-Datensatz auf Basis des
+Standards XJustiz in der aktuellen Version, Fachmodul ZSSR, hier gilt jedoch weiterhin folgendes zu
+beachten:
+Sollte das Online-Formular für den elektronischen Versand verwendet werden, so wird der XJustizDatensatz automatisch im Hintergrund erzeugt und mit der Einreichung an das Zentrale Schutzschriftenregister weitergeleitet.
+Folgende Dateiformate sind zum jetzigen Zeitpunkt zulässig:
+1. PDF und PDF/A (.pdf)
+43
+
+2. Rich Text Format (.rtf)
+3. Microsoft Word Dokumente ohne Makros (.doc, .docx)
+4. XML (.xml)
+Ein Dokumentenschutz darf an den Dokumenten jeweils nicht angebracht werden.
+8.5
+
+Zentrales Vollstreckungsgericht
+
+Sowohl das Schuldnerverzeichnis (§ 882h ZPO) als auch das Vermögensverzeichnis (§ 802k ZPO) werden für jedes Land von einem zentralen Vollstreckungsgericht geführt und können über eine zentrale
+und länderübergreifende Abfrage im Internet (www.vollstreckungsportal.de) eingesehen und abgerufen werden. Die Einlieferung der Daten in das jeweilige Fachverfahren erfolgt über EGVP durch das
+Vollstreckungsorgan, vorrangig Gerichtsvollzieher, Stadtkassen, Finanzämter und Hauptzollämter. Die
+Eintragungsdaten müssen hierzu in einheitlich strukturierten Datensätzen im XJustiz-Standard als
+XML-Datei übermittelt werden. Über das gemeinsame Vollstreckungsportal der Länder besteht für
+die einliefernden Stellen die Möglichkeit, auf einen Formulargenerator zuzugreifen. Jeder Datensatz
+muss einzeln übermittelt werden und wird nach Verarbeitung mit einer sogenannten Quittungsnachricht quittiert. Der Quittungsnachricht lässt sich entnehmen, ob die Verarbeitung erfolgreich war
+oder ob der Datensatz abgewiesen wurde. Wird der Datensatz abgewiesen, ist der Quittungsnachricht ein entsprechender Fehlercode über den Grund der Abweisung zu entnehmen.
+Bei der Übermittlung von Datensätzen über EGVP handelt es sich somit nicht um ein Kommunikationsszenario im klassischen Sinn, sondern vielmehr um eine automatisierte Verarbeitungstätigkeit.
+8.6
+
+Schiffsregistersachen
+
+In Schiffsregistersachen (Seeschiffsregister, Binnenschiffsregister, Schiffsbauregister) gelten für den
+elektronischen Rechtsverkehr – wie in Registersachen – vorrangig die in den einzelnen Bundesländern gemäß § 94 Abs. 1 S. 2 der Schiffsregisterordnung erlassenen Rechtsverordnungen.
+8.7
+
+Zwangsvollstreckung
+
+Für den Datenaustausch in Zwangsvollstreckungssachen steht ab XJustiz-Version 3.5.1 ein XJustizFachmodul bereit. Das Fachmodul wurde nachträglich an die geänderten gesetzlichen Regelungen
+angepasst und ist deshalb zusätzlich zur XJustiz-Version 3.5 als gesondertes Fachmodul „Zwangsvollstreckung“ auf https://xjustiz.justiz.de/xjustiz_3_5_1/index.php veröffentlicht.
+Die Übermittlung von Zwangsvollstreckungsanträgen in ausschließlich strukturierter Form im XJustizFormat ist noch nicht gesetzlich geregelt. Die Vollstreckungsformulare sind deshalb im PDF-Format
+einzureichen. Da einer Nachricht im ERV immer ein strukturierter Datensatz beizufügen ist, sollen die
+44
+
+Formulare ab der Version XJustiz 3.5 zusätzlich als strukturierte Daten im XJustiz-Format unter Verwendung des XJustiz-Fachmoduls „Zwangsvollstreckung“ in der jeweils gültigen Version übermittelt
+werden. Beteiligte, die das Fachmodul noch nicht umgesetzt haben, sollen die Vollstreckungsformulare im PDF-Format zusammen mit der allgemeingültigen XJustiz-Nachricht nachricht.gds.uebermittlungSchriftgutobjekte.0005005 übermitteln.
+
+45
+
+9
+
+Anlagen
+
+9.1
+
+Beschreibung der Inhalte der XJustiz-Nachrichten (Profilierung)
+•
+•
+
+2025_01_30_ERV_Profilierung_XJustiz_Nachricht_Uebermittlung_Schriftgutobjekte_und_eEB_XJustiz_3_5.xlsx
+2025_01_30_ERV_ Profilierung_XJustiz_Nachrichten_Bussgeldsachen_XJustiz_3_5.xlsx
+
+9.2
+
+Bußgeldverfahren, fachliche Rahmenbedingungen
+
+9.2.1
+
+Ausgangslage
+
+Aktuell ist gemäß § 110a Abs. 1 S. 2 OWiG eine elektronische Aktenführung in Bußgeldverfahren nur
+zulässig, wenn sie als solche angeordnet bzw. zugelassen wurde, z.B. durch Rechtsverordnung der
+Bundes- oder Landesregierung. Die gesetzliche Pflicht zur Führung elektronischer Bußgeldakten greift
+erst ab dem 1. Januar 2026 (§ 110a Abs. 1 S. 1 OWiG i.d. ab 1. Januar 2026 geltenden Fassung).
+Dass in der Praxis viele Behörden ihre Akten rein elektronisch führen, obwohl sie formal zu einer Führung der Akten in Papier verpflichtet sind, wird von der Rechtsprechung akzeptiert, wenn es zu irgendeinem Zeitpunkt im Verfahren zum Ausdruck der Akte kommt (z.B. für den Versand an die Justiz,
+vgl. OLG Koblenz, Beschluss vom 12.12.2017 - 2 OWi 4 SsRs 122/17 - und OLG Zweibrücken, Beschluss vom 08.01.2020 - 1 OWi 2 SsBs 117/19).
+Sobald eine führende elektronische Aktenführung erfolgt, muss diese im Rahmen des jeweils geltenden Rechts erfolgen. Bereits genutzte eAktensysteme und Fachverfahren der Behörden sind entsprechend anzupassen.
+Zu beachten sind die Vorschriften des OWiG (v.a. §§ 110a ff. OWiG) und der StPO (insb. § 110c OWiG
+i.V.m. § 32a ff. StPO) sowie die diese Normen konkretisierenden Verordnungen. Direkte Wirkung
+entfalten die Bußgeldaktenübermittlungsverordnung (BußAktÜbV), die Dokumentenerstellungsund -übermittlungsverordnung (DokErstÜbV) sowie die Strafakteneinsichtsverordnung (StrafAktEinV). Für Bußgeldbehörden des Bundes gilt außerdem unmittelbar die Bundesbußgeldaktenführungsverordnung (BBußAktFV). Sie gilt nicht für Landes- oder Kommunalbehörden, ihr kommt jedoch
+der Charakter einer Musterrechtsverordnung für die Verordnungen der Länder zu. Für die Bußgeldbehörden der Länder gelten die jeweiligen Bußgeldaktenführungsverordnungen der Länder, ggf. beschränkt auf die Geschäftsbereiche einzelner Ressorts, oder die Regelungen der jeweiligen Landesverordnungen zur elektronischen Aktenführung, sofern diese ihrem Anwendungsbereich nach auch
+Bußgeldbehörden erfassen. Für Dritte, die mit den Bußgeldbehörden elektronisch kommunizieren
+gilt außerdem die Elektronischer-Rechtsverkehr-Verordnung (ERVV).
+
+46
+
+Bereits zum Zeitpunkt der Einführung der elektronischen Akte laufende Verfahren müssen nicht in
+elektronische Akten umgewandelt werden, sondern können in Papier weitergeführt werden, § 110a
+Abs. 1 S. 3 1. HS OWiG, sofern dies in der jeweiligen Verordnung zur elektronischen Aktenführung bestimmt ist.
+Die Einführung der elektronischen Bußgeldakte hat keinen Einfluss darauf, was Inhalt der Akte werden muss, also z.B. was zur Akte zu nehmen ist und was nicht. Dies bleibt Regelungsgegenstand einschlägiger Aktenordnungen.
+In der elektronischen Akte ist das gesamte aktenrelevante Schriftgut strukturiert elektronisch abzulegen. Zu speichern sind alle Informationen und Dokumente, die auch Inhalt der herkömmlichen Papierakte geworden wären, einschließlich solcher, die herkömmliche, analoge Standards digital ersetzen (zum Beispiel Signaturdateien statt Unterschriften, den Geschäftsgang abbildende Bearbeitungsinformationen wie Laufweginformationen, Mitzeichnungen).
+Wesentliche Anforderungen an die Bußgeldbehörden:
+•
+•
+•
+•
+•
+•
+•
+9.2.2
+
+Erstellung elektronischer Dokumente durch die Bußgeldbehörde
+Umgang mit digitalen Beweismitteln
+Umgang mit elektronischen Eingängen Dritter
+Umgang mit Papiereingängen Dritter (insb. Scan-Anforderungen)
+Umgang mit Papierdokumenten, die die Bußgeldbehörde erstellt hat
+Gewährung von Akteneinsicht
+Übermittlung an die Justiz
+Aktenführung und Erstellung elektronischer Dokumente durch die Bußgeldbehörde
+
+Die Vorgaben zur Führung der elektronischen Akte bei den Ordnungswidrigkeitenbehörden richten
+sich nach den jeweils einschlägigen Landesverordnungen zur Führung elektronischer Akten bzw. bei
+den Bußgeldbehörden des Bundes nach der BBußAktFV. Die Landesverordnungen können landesweit
+gelten, für einzelne Behörden oder für Geschäftsbereiche einzelner Ministerien.
+Die Aktenführungsverordnungen definieren die organisatorischen und dem Stand der Technik entsprechenden technischen Rahmenbedingungen einschließlich der einzuhaltenden Anforderungen des
+Datenschutzes, der Datensicherheit und der Barrierefreiheit.
+Inhaltlich dient die BBußAktFV, die als Bundesverordnung unmittelbar nur für Bußgeldbehörden des
+Bundes gilt, als Musterverordnung für die durch die Länder zu erlassenden Verordnungen. Sie wird
+daher auch diesem Leitfaden zu Grunde gelegt.
+47
+
+Werden elektronisch erstellte Dokumente der Bußgeldbehörde zur elektronisch geführten Akte genommen, kann dies ohne weitere Zwischenschritte, insbesondere ohne qualifiziert elektronisches
+Signieren des Dokuments (dazu unter Kapitel 9.2.3.2) erfolgen. Es genügt, wenn der Name der/des
+Sachbearbeitenden als einfacher Schriftzug (sog. (einfache) elektronische Signatur, dazu unter Kapitel
+9.2.3.3) aus dem Dokument hervorgeht oder anhand der zu diesem Dokument geführten Protokolldateien des Computersystems feststellbar ist. Die Ordnungsbehörden müssen daher sicherstellen,
+dass deren Computersysteme den Ersteller eines Dokuments genau festhalten und nicht auf dem Dokument der Ersteller A erscheint, wenn der Urlaubsvertreter das Dokument erstellt und als Urheber
+im System protokolliert ist. Insgesamt muss also klar sein, dass die Verfasser des Dokuments aus den
+Protokolldateien des Computersystems sicher identifizierbar sind.
+§ 32b Abs. 1 S. 2 StPO sieht eine qualifiziert elektronische Signatur nur noch für solche Dokumente
+vor, die nach der StPO oder dem OWiG zu unterschreiben oder zu unterzeichnen sind. Entsprechende Verpflichtungen treffen die Bußgeldbehörden in der Praxis mangels rechtlicher Unterschrifts- oder Unterzeichnungspflichten nicht.32
+Auch beim ersetzenden Scannen (dazu näher unter Kapitel 9.2.3) besteht für Bußgeldbehörden
+grundsätzlich keine Verpflichtung, eingescannte Dokumente qualifiziert elektronisch zu signieren.
+Nur wenn das Original unmittelbar nach dem Scanvorgang vernichtet werden soll, besteht das Erfordernis, die erstellte Datei qualifiziert elektronisch zu signieren (vgl. § 110c S. 3 OWiG; dazu näher unter Kapitel 9.2.3.4)
+Eine Datei oder ein Dokument wird wie bisher Bestandteil der Akte, wenn es durch bewussten Akt
+dauerhaft zur Akte genommen wird, § 3 Abs. 1 BBußAktFV. Damit werden Entwürfe, Notizen oder
+Terminerinnerungen, die nicht Aktenbestandteil sein müssen, aber möglicherweise im System zu
+demselben Aktenzeichen gespeichert werden können, nicht Gegenstand der elektronischen Akte im
+Rechtssinn.
+Von der eAkte zu unterscheiden, ist das Repräsentat im Sinne des § 2 Abs. 2 BBußAktFV, also die
+Sammlung der PDF-Dokumente, welche die Akte im Rechtsverkehr repräsentieren. Das Repräsentat
+muss jederzeit erstellbar sein, aber nicht zusätzlich in der Akte gespeichert werden. Das Repräsentat
+ist insbesondere bei der Akteneinsicht von Bedeutung (dazu näher unter Kapitel 9.2.5).
+
+32
+
+Für die in der Praxis bedeutsamen Fälle der Verjährungsunterbrechung, die bisher bei einer elektronischen
+
+Aktenführung qualifiziert elektronisch signiert werden müssten, genügt gem. § 33 Abs. 2 OWiG seit 1. Juli 2021
+die (elektronische) Abfassung der Anordnung oder Entscheidung.
+
+48
+
+Videos und Fotos sind Beweismittel und als solche zu behandeln und zu asservieren. Sie können zusätzlich in der elektronischen Akte gespeichert werden. Wenn sie in der elektronischen Akte gespeichert werden, werden sie auch Aktenbestandteil.
+9.2.3
+
+Umgang mit elektronischen Eingängen im besonderen Behördenpostfach (beBPo) der Bußgeldbehörde
+
+Die elektronische Einreichung durch Dritte bei der Bußgeldbehörde richtet sich nach § 110c S. 1
+OWiG i.V.m. § 32a StPO i.V.m. §§ 2 – 5 ERVV (Elektronischer-Rechtsverkehr-Verordnung).
+Die Dateiformate, die die Bußgeldbehörden von Dritten akzeptieren müssen, ergeben sich aus §§ 14
+und 15 ERVV. Für Prozesserklärungen verweist § 14 ERVV auf die allgemeinen Vorschriften und damit
+auf § 2 Abs. 1 ERVV, der nur PDF und TIFF vorsieht. Andere Dateiformate sind nach § 15 ERVV zugelassen, soweit Sicherheitsbedenken nicht entgegenstehen.
+Besondere Anforderungen an die elektronische Einreichung gelten danach dann, wenn ein Dokument, welches „schriftlich abzufassen, zu unterschreiben oder zu unterzeichnen" ist, eingereicht
+wird. Im Bußgeldverfahren betrifft dies insbesondere den Einspruch nach § 67 Abs. 1 S. 1 OWiG, hingegen nicht das Akteneinsichtsgesuch oder sonstige Eingaben im laufenden Verfahren, da diese keinen Formerfordernissen unterliegen.
+Bei einem elektronischen Eingang muss Folgendes in die Akte bzw. mit Bezug zur Akte übernommen und gespeichert werden:
+•
+•
+•
+
+die Originaldateien,
+die Signaturdateien und
+die fachlich relevanten Sendungsdaten.33
+
+Die fachlich relevanten Sendungsdaten werden durch die Sende- und Empfangskomponenten der
+EGVP-Infrastruktur automatisch erstellt und für den Postfachinhaber lesbar bereitgestellt.
+9.2.3.1
+
+Übermittlungsweg
+
+Wenn das Gesetz besondere Formerfordernisse (s.o.) aufstellt, sind zwei elektronische Einreichungswege zulässig: Das sog. Elektronische Gerichts- und Verwaltungspostfach (EGVP), § 110c OWiG
+i.V.m. § 32a Abs. 3 Alt. 2 StPO, und die sog. sicheren Übermittlungswege, § 110c OWiG i.V.m. § 32a
+Abs. 3 Alt. 1 StPO, die ihrerseits z.T. auf der EGVP-Infrastruktur aufbauen.
+
+33
+
+Hierzu gehören u.a. die Informationen zu Absender und Empfänger, zum Eingangszeitpunkt und ob ein sog.
+
+sicherer Übermittlungsweg genutzt wurde und/oder ob ein Dokument qualifiziert elektronisch signiert war, wer
+signiert hat und ob die Signatur korrekt ist.
+
+49
+
+Gem. § 110c S.1 OWiG i.V.m. § 32a Abs. 4 StPO sind sichere Übermittlungswege, das besondere
+elektronische Anwaltspostfach (sog. beA) und gemäß § 32a Abs. 4 Nr. 3 StPO auch das besondere Behördenpostfach (sog. beBPo).
+Zum 01. Januar 2022 wurde zudem das elektronischen Bürger- und Organisationenpostfach (sog.
+eBO) eingeführt und der Postfach- und Versanddienst eines Nutzerkontos im Sinne des § 2 Absatz 5
+des Onlinezugangsgesetzes als sicherer Übermittlungsweg zugelassen.
+9.2.3.2
+
+Qualifizierte elektronische Signatur (qeS), Art. 3 Nr. 12 eIDAS-Verordnung
+
+Als qualifiziert elektronische Signaturen sind in technischer Hinsicht die in die jeweilige Datei eingebettete Signatur (sog. Inline-Signatur) oder der Datei beigefügte Signaturen (sog. Detached-Signatur)
+möglich. Containersignaturen sind nicht zulässig (§ 4 Abs. 2 ERRV), weil in diesem Fall nach der Trennung der Dokumente die Signatur nicht für jedes einzelne Dokument gesondert überprüft werden
+kann, sondern immer der ursprüngliche Container vorhanden sein muss, um eine Signaturprüfung
+durchführen zu können (vgl. auch BGH Beschluss v. 15.05.2019, XII ZB 573/18).
+Eine qualifizierte elektronische Signatur (sog. „.pkcs7-Datei“) hat bei elektronisch eingehenden Dokumenten nur dann eine eigenständige Bedeutung, wenn kein sicherer Übermittlungsweg genutzt
+wurde.
+Aber: Wenn ein Dokument mit einer qeS (und gegebenenfalls beigefügter Signaturdatei) eingeht,
+muss die Signaturdatei für eine spätere Überprüfung durch die Justiz zwingend mit in die eAkte aufgenommen werden. Es sind Fallkonstellationen denkbar, in denen der qeS materiell-rechtliche Wirkung zukommt.
+Die Bußgeldbehörde muss ihrerseits eingehende Signaturen überprüfen und sollte das Ergebnis dieser Signaturprüfung (Signaturprüfprotokoll) zur Akte nehmen.
+Die qeS ist von der Person anzubringen, die das Dokument zu unterschreiben hat.
+9.2.3.3
+
+(Einfache) elektronische Signatur (eS), Art. 3 Nr. 10 eIDAS-Verordnung
+
+Bei Nutzung eines sicheren Übermittlungsweges i.S.v. §§ 110c S.1 OWiG i.V.m. § 32a Abs. 4 StPO ist
+bei Dokumenten, welche schriftlich abzufassen, zu unterschreiben oder zu unterzeichnen sind, gemäß
+§ 32a Abs. 3 Alt. 2 StPO keine qualifizierte elektronische Signatur erforderlich.
+
+50
+
+Es genügt, das relevante PDF-Dokument einfach elektronisch zu signieren; für eine einfache elektronische Signatur reicht der getippte Name aus; anschließend muss das Dokument über den sicheren
+Übermittlungsweg übersandt werden.
+Beim Eingang von einem beA ist zu beachten, dass die Versendung von der Person erfolgen muss, auf
+die das beA angemeldet ist. Das ist nur der Rechtsanwalt selbst. Nutzt die Sekretärin eines Rechtsanwalts das beA, handelt es sich nicht um einen sicheren Übermittlungsweg, der eine qeS entbehrlich
+macht; es liegt dann lediglich ein Versand über EGVP vor.
+Den sicheren Übermittlungsweg vom Anwalt hin zur Behörde kann die Justiz in einem strengen Sinne
+nicht prüfen. Aus diesem Grund muss die Nutzung des sicheren Übermittlungswegs als solches von
+der Behörde aktenkundig gemacht werden. Dies kann entweder durch den Import der (automatisch
+erzeugten) Prüfprotokolle erfolgen oder auch durch einen handschriftlichen und gescannten Aktenvermerk.34
+9.2.3.4
+
+Vollmacht
+
+Aufgrund der vorgesehenen Änderung von § 51 Abs. 3 OWiG-E35 genügt zukünftig im Regelfall die
+(elektronische) Kopie einer Vollmacht zum Nachweis der Bevollmächtigung. Dies ermöglicht es dem
+Verteidiger, die Vollmacht elektronisch zu den Akten einzureichen, vgl. § 51 Abs. 3 OWiG-E36. Die
+Nachreichung der Vollmacht im Original kann mit Fristsetzung verlangt werden.
+9.2.3.5
+
+Relevanter Eingangszeitpunkt eines elektronischen Eingangs bei der Bußgeldbehörde
+
+Für die Wahrung einer Frist (z.B. Einspruchsfrist) kommt es nach § 110c S. 1 OWiG i.V.m. § 32a Abs. 5
+S. 1 StPO darauf an, wann das Dokument auf der für den Empfang bestimmten Einrichtung der Behörde gespeichert ist. Dies meint den Eingang des Dokuments auf dem sog. OSCI-Intermediär, der im
+Auftrag der Behörden zentral in den zuständigen Rechenzentren betrieben wird. Irrelevant sind danach u.a. das Datum, an die die Behörde die Nachricht vom Intermediär abgeholt hat, oder der Zeitpunkt einer etwaigen Signatur.
+
+34
+
+Mit z.B. folgendem Wortlaut: „Ich habe mir das pruefvermerk.pdf oder das „inspectionsheet.html“ ange-
+
+schaut und konnte feststellen, dass ein sicherer Übermittlungsweg genutzt wurde“.
+35
+
+Vgl. Fn. 1.
+
+36
+
+Vgl. Fn. 1.
+
+51
+
+Dem Absender ist eine automatisierte Bestätigung über den Zeitpunkt des Eingangs zu erteilen. Diese
+Eingangsbestätigung wird innerhalb der EGVP-Infrastruktur immer automatisiert erzeugt und dem
+Absender zur Verfügung gestellt.
+Das für die Fristwahrung maßgebliche Datum entspricht dem strukturieren Sendungsdatum „Eingang
+auf dem Server“ und ist in den von der verwendeten EGVP Empfangs- und Versandkomponente erstellten Protokollen aufgeführt. Die dort abgebildete Uhrzeit entspricht der Zeit, die auf der automatisiert erzeugten Eingangsbestätigung des Servers für den Absender abgedruckt wird.
+9.2.4
+
+Umgang mit Papiereingängen Dritter (Scan-Anforderungen)
+
+9.2.4.1
+
+Zulässigkeit von Papiereingängen, insbesondere durch Rechtsanwälte und Verteidiger
+
+Nicht anwaltlich vertretene Personen können weiterhin auf den bisherigen Wegen Schriftstücke bei
+der Bußgeldbehörde einreichen.
+Rechtsanwälte und Verteidiger sollen hingegen gemäß § 110c S. 1 OWiG, § 32d S. 1 StPO ab dem 1.
+Januar 2022 alle zu übermittelnden Dokumente in einem Ordnungswidrigkeitenverfahren dem Empfänger als elektronisches Dokument übermitteln. Letztlich handelt es sich aber der Form nach nur um
+eine Sollvorschrift, mit deren Nichtbefolgung zunächst noch keine Konsequenzen verbunden sind.
+§ 110c S. 1 OWiG, § 32d S. 2 StPO sieht für bestimmte Erklärungen eine Nutzungspflicht für Rechtsanwälte und Verteidiger vor. Bei der Übermittlungsverpflichtung gemäß § 32d S. 2 StPO handelt es sich
+um eine Form- und Wirksamkeitsvoraussetzung der jeweiligen Prozesshandlung, welche bei Nichteinhaltung deren Unwirksamkeit zur Folge hat.
+Bei den Erklärungen und Anträgen nach § 32d S. 2 StPO ist nur dann eine Übermittlung in Papierform
+zulässig, wenn eine elektronische Übermittlung aus technischen Gründen vorübergehend nicht möglich ist (vgl. § 32d S. 3 StPO). Dabei stellt das Gesetz nicht darauf ab, in wessen Sphäre die technische
+Unmöglichkeit verortet ist; denn auch bei einem Ausfall der technischen Einrichtungen des Rechtsanwalts oder Verteidigers darf dies nicht zum Nachteil eines Verfahrensbeteiligten gereichen. Eine Einschränkung ergibt sich aber bereits aus der Formulierung der Regelung „vorübergehend“ und „technische Gründe“, weshalb diese Ausnahmevoraussetzungen ausscheiden, wenn Verteidiger oder
+Rechtsanwalt überhaupt kein geeignetes System vorhalten oder bei technischen Problemen nicht
+umgehend für deren Behebung sorgen.
+
+52
+
+§ 110c S. 1 OWiG erklärt § 32d StPO für entsprechend anwendbar. Fraglich ist im Zusammenhang der
+Übermittlungsverpflichtung des § 32d S. 2 StPO, ob diese Verpflichtung auch für den Einspruch bei
+Bußgeldbehörden gilt. Verteidiger und Rechtsanwälte wären in der Folge grundsätzlich verpflichtet,
+den Einspruch nur elektronisch einzureichen. Ob ein Eingang des Einspruchs bei der Behörde in Papierform unwirksam ist, ist daher derzeit ungeklärt und bleibt der Rechtsprechung überlassen. Alternativ wäre eine Klarstellung durch den Gesetzgeber möglich. Eine solche ist derzeit nicht in Sicht.
+Sonstige Verfahrenserklärungen, insbesondere Einlassungen zur Sache oder Anträge zum Verfahren
+bleiben vom Formzwang ausgenommen. Solche Erklärungen im Bußgeldverfahren sind auch weiterhin durch eine handschriftliche Erklärung möglich; der Verteidiger muss sie jederzeit auch ohne technische Hilfsmittel vornehmen können.
+9.2.4.2
+
+Was muss gescannt werden?
+
+Zu scannen sind grundsätzlich alle in Papierform befindlichen Dokumente. § 110c OWiG i.V.m. § 32e
+Abs. 1 StPO legt fest, dass Dokumente, die nicht der Form entsprechen, in der die Akte geführt wird,
+in die entsprechende Form zu übertragen sind.
+Im Einzelfall können dies auch als Beweismittel sichergestellte Unterlagen sein. Dokumente, die als
+Beweismittel sichergestellt worden sind, können gemäß § 110c OWiG i.V.m. § 32e Abs. 1 S. 2 StPO in
+die aktenführende Form übertragen werden, es besteht aber keine Pflicht.37 Wurde es in der Papierwelt für erforderlich gehalten, die Ablichtung eines Beweismittels zur Papierakte zu nehmen, soll dies
+auch bei elektronischer Aktenführung erfolgen. Zusätzlich ist das Beweismittel, wie bisher, zu asservieren.
+9.2.4.3
+
+Wie ist zu scannen?
+
+Bei der Übertragung von Ausgangsdokumenten ist nach dem „Stand der Technik“ sicherzustellen,
+dass das übertragene Dokument mit dem Ausgangsdokument bildlich und inhaltlich übereinstimmt
+(§ 110c OWiG i.V.m. § 32e Abs. 2 StPO).
+Das eingescannte elektronische Dokument ist mit einem Übertragungsnachweis zu versehen, der die
+Übereinstimmung und das verwendete Scanverfahren dokumentiert.
+
+37
+
+KK-OWiG/Graf OWiG § 110c Rn. 56, 61.
+
+53
+
+Nach § 2 Abs. 3 DokErstÜBV ist der Stand der Technik im Sinne des § 32e Abs. 2 StPO insbesondere
+gewahrt, wenn den Anforderungen der Vorgaben der technischen Richtlinie des Bundesamtes für Sicherheit in der Informationstechnik (BSI) zum „rechtssicheren ersetzenden Scannen“ (TR RESISCAN)
+in der jeweils gültigen Fassung genügt wird.
+Dies legt es nahe, sich an den Vorgaben der TR RESISCAN zu orientieren. Die TR RESISCAN gibt Maßnahmen in technischer, organisatorischer und personeller Hinsicht vor.
+Justizseitig wurde eine Schutzbedarfsanalyse zum ersetzenden Scannen erstellt, die auch den Strafbereich betrachtet.38 Im Ergebnis wurde der Schutzbedarf in allen betrachteten Bereichen mit allenfalls „hoch“ bewertet.39 Der Verweis des § 110c OWiG auf die StPO legt es nahe, dass auch in Bußgeldsachen maximal der Schutzbedarf hoch zugrunde zu legen ist.
+Bei der Planung der Scanprozesse für ein rechtssicheres ersetzendes Scannen dürfte es sich anbieten,
+frühzeitig ein Mengengerüst der mutmaßlich zu scannenden Dokumente zu erstellen, damit hieraus
+Rückschlüsse auf den sachlichen, räumlichen und personellen Bedarf gezogen und entsprechend in
+die Planungen einbezogen werden können.
+9.2.4.4
+
+Umgang mit den Originalen nach dem Scannen
+
+Grundsätzlich müssen gescannte Originaldokumente, soweit es sich nicht um Beweismittel handelt,
+während des laufenden Verfahrens nach der Übertragung in die elektronische Form mindestens
+sechs Monate lang aufbewahrt werden.
+Ist das Verfahren abgeschlossen oder Verjährung eingetreten, dürfen sie längstens bis zum Ablauf
+des zweiten Kalenderjahres aufbewahrt werden, das auf den Abschluss des Verfahrens folgt (§ 110c
+OWiG i.V.m. § 32e Abs. 4 S. 2 StPO).
+Die in Papier vorliegenden, gescannten Originaldokumente verbleiben grundsätzlich dort, wo sie gescannt werden. Sie werden nur auf Anforderung an die Justiz übersendet.
+Abweichend von § 32e Abs. 4 S. 1 StPO müssen gemäß § 110c S.3 OWiG Ausgangsdokumente nicht
+gespeichert oder aufbewahrt werden, wenn die übertragenen Dokumente zusätzlich einen mit einer
+qualifizierten elektronischen Signatur versehenen Vermerk darüber enthalten, dass das Ausgangsdo-
+
+38
+
+Als vertraulich gekennzeichnete Posteingänge wurden bei der Betrachtung nicht einbezogen.
+
+39
+
+Schutzbedarfe hinsichtlich der Verfügbarkeit hoch, Vertraulichkeit hoch, Integrität normal.
+
+54
+
+kument mit dem zur Akte zu nehmenden Dokument inhaltlich und bildlich übereinstimmt. Die Behörde hat in diesem Fall die Wahl zwischen der elektronischen Signatur (Anschaffung Signaturkarten
+für alle ersetzend scannenden Mitarbeiter) und der Speicherung und befristeten Archivierung von
+Dokumenten (Lageraufwand).
+9.2.5
+
+Umgang mit Papierdokumenten, die die Bußgeldbehörde selbst erstellt
+
+Beispiel: behördeninterne Dokumente in Papierform; zum Beispiel ein handschriftlicher Aktenvermerk über ein Telefonat.
+Sollen solche Dokumente Aktenbestandteil werden, müssen sie durch Scannen gemäß § 110c S. 1 OWiG i.V.m. § 32e StPO in die elektronische Akte aufgenommen werden. Zu den Scan-Anforderungen
+siehe Kapitel 9.2.3.
+§ 32e Abs. 3 S. 2 StPO stellt klar, dass beim ersetzenden Scannen durch Bußgeldbehörden keine qeS
+erforderlich ist, vgl. dazu bereits oben Kapitel 9.2.1 und Kapitel 9.2.3.4.
+9.2.6
+
+Gewährung von Akteneinsicht in eine elektronisch geführte Akte
+
+9.2.6.1
+
+Form der Akteneinsicht
+
+Die Akteneinsicht in elektronische Bußgeldakten erfolgt durch das sog. Bereitstellen des Repräsentats der Akte zum Abruf oder durch Übermittlung des Inhalts der Akte auf einem sicheren Übermittlungsweg (§ 110c OWiG i.V.m. § 32f Abs. 1 S. 1 StPO und § 2 StrafAktEinV). Da die allerwenigsten
+Bußgeldbehörden derzeit über ein Akteneinsichtsportal verfügen und das Akteneinsichtsportal der
+Justiz nicht durch sie genutzt werden kann, ist aktuell der Versand des Inhalts der elektronischen
+Akte in Form des Repräsentats über einen sicheren Übermittlungsweg die Regel.
+Auf besonderen Antrag wird Akteneinsicht durch Einsichtnahme in die elektronischen Akten in
+Diensträumen gewährt (§ 110c OWiG i.V.m. § 32f Abs. 1 S. 2 StPO und § 4 StrafAktEinV).
+Schließlich ist Akteneinsicht auch durch Ausdruck der Akte oder Speicherung auf einem Datenträger
+möglich (§ 110c OWiG i.V.m. § 32f Abs. 1 S. 2 StPO und §§ 5, 6 StrafAktEinV). Ein Aktenausdruck oder
+ein Datenträger mit dem Inhalt der elektronischen Akten wird auf besonders zu begründenden Antrag nur übermittelt, wenn der Antragsteller hieran ein berechtigtes Interesse hat. Dies kann insbesondere dann gegeben sein, wenn dem Antragsteller keine technischen Möglichkeiten zur Verfügung
+
+55
+
+stehen, elektronische Dokumente wiederzugeben, oder es ihm nicht zuzumuten ist, zur Einsichtnahme einen Dienstraum aufzusuchen40. Nicht ausreichend ist hingegen, dass der Antragsteller die
+Einsichtnahme in eine gedruckte Form der Akte der digitalen Einsichtnahme vorzieht. Nach § 5 StrafAktEinV ist in diesen Fällen das Repräsentat auszudrucken. Die zulässigen Speichermedien für eine
+Akteneinsicht nach § 6 StrAktEinV ergeben sich aus der entsprechenden Bekanntmachung der Bundesregierung gem. § 8 Abs. 1 Nr. 2 StrafAktEinV41.
+9.2.6.2
+
+Wasserzeichen
+
+§ 2 Abs. 1 S. 2 StrafAktEinV wiederholt die Anforderung des § 32f Abs. 4 S. 2 StPO, wonach der Name
+der Person, der Akteneinsicht gewährt wird, durch technische Maßnahmen nach dem Stand der
+Technik dauerhaft erkennbar gemacht werden soll.
+Dies kann bspw. in Form der Anbringung eines (digitalen) Wasserzeichens auf den einzelnen Seiten
+der jeweiligen PDF-Dokumente erfolgen.
+9.2.6.3
+
+Belehrung
+
+§ 7 StrafAktEinV bestimmt, dass die Person, der Akteneinsicht gewährt wird, darüber belehrt wird,
+dass
+1. sämtliche Inhalte, die im Rahmen der Akteneinsicht überlassen werden, weder ganz noch
+teilweise öffentlich verbreitet oder Dritten zu verfahrensfremden Zwecken übermittelt
+oder zugänglich gemacht werden dürfen;
+2. personenbezogene Daten nur zu dem Zweck, für den die Akteneinsicht gewährt wird,
+verwendet werden dürfen, es sei denn, dass für den Zweck, zu dem die Person, der Akteneinsicht gewährt wird, die Daten verwenden will, ebenfalls Auskunft oder Akteneinsicht gewährt werden dürfte;
+3. die Offenbarung oder Veröffentlichung von Akteninhalten nach den §§ 94 bis 97, 203,
+353d StGB oder § 42 BDSG strafbar sein kann;
+4. der durch einen Abruf gespeicherte Inhalt einschließlich der personenbezogenen Daten
+zu löschen ist, sobald der Zweck für seine Speicherung weggefallen ist und seine weitere
+Aufbewahrung und Verarbeitung nicht nach anderen Vorschriften gestattet ist.
+
+40
+
+BT-Drs. 18/9416, 57.
+
+41
+
+eAeDB 2020, https://justiz.de/laender-bund-europa/elektronische_kommunikation/bundesanzeiger-
+
+02_10_2020.pdf).
+
+56
+
+9.2.7
+
+Übertragung an die Justiz
+
+9.2.7.1
+
+Allgemeines
+
+Grundsätzlich müssen zwei Konstellationen unterschieden werden: die Übermittlung der ganzen
+Akte und die Übermittlung einzelner Dokumente (s. Kapitel 7.3). Keinen Unterschied macht es, ob
+ein Versand an eine Staatsanwaltschaft oder an ein Gericht erfolgt.
+Gleich ist bei beiden Übermittlungen der Übermittlungsweg, der in § 4 BußAktÜbV und § 5 DokErstÜbV übereinstimmend geregelt ist: Für eine elektronische Übermittlung ist im Regelfall42 die
+EGVP-Infrastruktur zu nutzen, d.h. die Behörde muss die elektronische Akte oder das elektronische
+Dokument über ihr beBPo an die Justiz übermitteln.
+Bei der Übermittlung soll ein strukturierter maschinenlesbarer Datensatz beigefügt werden (§ 2 Abs.
+3 BußAktÜbV bzw. § 3 Abs. 4 DokErstÜbV i.V.m. der entsprechenden Bekanntmachung der Bundesregierung43), der die automatisierte Erfassung bestimmter Grunddaten im weiteren Verfahren und die
+Zuordnung des elektronischen Dokuments zu einem (bei der Staatsanwaltschaft oder dem Gericht
+bereits bekannten) Verfahren ermöglicht. Trotz der Verwendung des Wortes „sollen“ dürfte die Vorschrift – dem Grundsatz des intendierten Ermessens44 folgend – eine Pflicht zur Übermittlung im
+Sinne eines „müssen“ etablieren. Im Regelfall ist daher der Übermittlung dieser Datensatz beizufügen, es sei denn, es liegen besondere Umstände vor, die ausnahmsweise ein Absehen von der Übermittlung rechtfertigen. Solche besonderen Umstände können etwa vorliegen, wenn der Datensatz
+bei eilbedürftigen Vorgängen nicht rechtzeitig in Erfahrung gebracht werden kann45.
+
+42
+
+Vgl. § 5 Abs. 2 DokErstÜbV.
+
+43
+
+eAeDB, abrufbar unter https://justiz.de/laender-bund-europa/elektronische_kommunikation/bundesanzei-
+
+ger-02_10_2020.pdf).
+44
+
+Die Figur des intendierten Ermessens wurde durch die verwaltungsgerichtliche Rechtsprechung entwickelt.
+
+Danach ist das von der Verwaltung durch Ermessenserwägungen zu findende Ergebnis bereits durch eine gesetzliche Intention vorgezeichnet. Die Intention des Gesetzgebers ist auf ein bestimmtes Ergebnis gerichtet, das
+nur ausnahmsweise in atypischen Fällen anders ausfallen kann (vgl. dazu Schoch/Schneider/Geis VwVfG, § 40,
+Rn. 27).
+45
+
+Vgl. dazu Bl. 13 d. Begründung des Bundesrates zur Verordnung über die Standards für die Erstellung elektro-
+
+nischer Dokumente und für Strafverfolgungsbehörden deren und Übermittlung Gerichten zwischen (Dokumentenerstellungs- und -übermittlungsverordnung - DokErstÜbV), Drucksache 634/19.
+
+57
+
+Eine Ausnahme von der rein elektronischen Übermittlung besteht nach § 110c OWiG i.V.m. § 32b
+Abs. 3 S. 3 StPO bei technischen Problemen.
+
+9.2.7.2
+
+Aktenübermittlung an die Justiz
+
+Eine Übermittlung der ganzen Akte erfolgt in der Regel zur Abgabe der Aktenführung oder der weiteren Bearbeitung. Dies umfasst z.B. die Fälle des § 69 Abs. 3 OWiG (Abgabe nach Einspruch) und
+des § 41 Abs. 1 OWiG (Verdacht einer Straftat).
+Zur Abgabe der Aktenführung wird die elektronische Akte mit einem Übernahmeersuchen übermittelt. Die Abgabe ist vollzogen, wenn von der übernehmenden Stelle ein entsprechender Strukturdatensatz an die abgebende Stelle zurückgesendet wurde (§ 3 Abs. 3 S. 1 BußAktÜbV).
+Gemäß § 2 Abs. 3 S. 2 Nr. 7 BußAktÜbV besteht aber auch die Möglichkeit, dass eine elektronische
+Akte übermittelt wird, ohne dass die Aktenführung oder die Bearbeitungsbefugnis an die empfangende Stelle abgegeben werden soll.
+Gemäß § 2 Abs. 1 S. 1 BußAktÜbV sollen elektronische Bußgeldakten grundsätzlich elektronisch
+übermittelt werden, wenn die empfangende Stelle die Akten elektronisch führt. Führt die empfangende Stelle noch keine elektronischen Akten, sind elektronische Dokumente vor der Übermittlung
+nach Maßgabe des § 32e StPO in die Papierform zu übertragen, § 2 Abs. 1 S. 2 BußAktÜbV.
+Abweichend hiervon können nach § 2 Abs. 2 BußAktÜbV aktenführende Verwaltungsbehörden,
+Staatsanwaltschaften und Gerichte, welche die Akten elektronisch führen, Akten auch dann als elektronische Akten an andere aktenführende Verwaltungsbehörden, Staatsanwaltschaften oder Gerichte
+übermitteln, wenn diese die Akten in Papierform führen. Führt also eine Bußgeldbehörde ihre Akte
+elektronisch (und zwar zulässigerweise, da eine entsprechende Rechtsverordnung existiert, s. Kapitel
+8.2), dann darf sie die Akte auch dann elektronisch an die Justiz übermitteln, wenn die Justiz noch
+keine elektronische Bußgeldakte führt. Da viele Justizbehörden jedoch noch keine elektronischen
+Akten in Bußgeldsachen führen, bedarf es hierzu genauere Abstimmungen im Einzelfall zwischen den
+Bußgeld- und Justizbehörden, um Mehraufwände zu vermeiden.
+Beim Übergang der Aktenführung ist § 3 BußAktÜbV zu beachten. Hiernach darf die elektronische
+Akte ab dem Zeitpunkt der Übermittlung bei der abgebenden Stelle nicht mehr fortgeschrieben werden. Eine entsprechende Kennzeichnung ist gem. § 3 Abs. 4 BußAktÜbV erforderlich. Von der übernehmenden Stelle ist ein entsprechender Strukturdatensatz zu übersenden, § 3 Abs. 3 BußAktÜbV.
+58
+
+9.2.7.3
+
+Dokumentenübermittlung an die Justiz
+
+Hiervon erfasst sind z.B. die Fälle des § 96 OWiG (Antrag auf Erzwingungshaft)46 und des § 98 OWiG
+(Vollstreckung gegen Jugendliche und Heranwachsende). Erfasst sind außerdem die Fälle, in denen
+nach Abgabe an die Justiz bei der Behörde noch Schreiben eingegangen sind und diese an die Justiz
+weitergegeben werden.
+Über § 110c OWiG findet § 32b Abs. 3 StPO auch auf die Kommunikation zwischen Bußgeldbehörde
+und Justiz Anwendung. Danach sollen Dokumente elektronisch übermittelt werden, wenn die empfangende Stelle die Akten elektronisch führt.
+Wenn die empfangende Stelle keine eAkte führt, dann muss das elektronische Dokument vor der
+Übermittlung in Papier übertragen werden, § 3 Abs. 1 S. 2 DokErstÜbV.
+9.2.7.4
+
+Sonderkonstellation: § 62 OWiG: Antrag auf gerichtliche Entscheidung
+
+Beispielsfälle sind Streitigkeiten im Rahmen der Akteneinsicht oder in Bezug auf die Kostennote nach
+der Einstellung eines Verfahrens.
+Hier werden in der Praxis zum Teil die ganze Akte (insoweit wäre die BußAktÜbV anwendbar), zum
+Teil aber auch nur einzelne Dokumente aus der Akte an die Justiz übertragen (dann wäre die DokErstÜbV anwendbar).
+9.2.7.5
+
+Vollstreckung durch die Bußgeldbehörden
+
+§ 90 OWiG verweist für die Vollstreckung von Bußgeldbescheiden, die durch eine Verwaltungsbehörde des Bundes erlassen wurden, auf das Verwaltungs-Vollstreckungsgesetz des Bundes (BGBl. I S.
+157). Für Bußgeldbescheide der Landesbehörden gelten gemäß § 90 OWiG die Landesverwaltungsvollstreckungsgesetze (LVwVG).
+Die LVwVG verweisen zum Teil für die Vollstreckung von Geldforderungen durch Gerichtsvollzieher
+im Wege der Amtshilfe auf die ZPO (z.B. § 15a Abs. 3 LVwVG BW, § 3 Abs. 2 LVwVG NW, § 5 Abs. 5
+LVwVG RP)
+•
+
+46
+
+Soll die Vollstreckung durch den Gerichtsvollzieher erfolgen, gelten gem. § 753 Abs. 4 ZPO
+die allgemeinen Regeln des elektronischen Rechtsverkehrs nach der ZPO, insbesondere
+§130a ZPO, der im Wesentlichen § 32a StPO entspricht.
+
+Wird in diesen Fällen die gesamte Akte übermittelt, muss nach § 2 Abs. 3 Nr. 7 BußAktÜbV mitgeteilt wer-
+
+den, dass es sich um ein Repräsentat oder eine nicht bearbeitbare Aktenkopie handelt.
+
+59
+
+•
+
+9.2.8
+
+Wichtig: § 753 Abs. 5 ZPO sieht i.V.m. § 130d ZPO ab dem 1. Januar 2022 eine Nutzungspflicht des ERV für Behörden für schriftlich einzureichende Anträge und Erklärungen vor. In
+den Fällen des § 754a ZPO ersetzt der Vollstreckungsauftrag die Vorlage des Titels. Er muss
+daher entweder auf einem sicheren Übermittlungsweg oder über EGVP und mit qeS eingereicht werden.
+Datenschutz und Löschfristen
+
+§ 49d OWiG verweist für den Schutz personenbezogener Daten auf die entsprechenden Regelungen
+der StPO, § 496 Abs. 1 und 2, §§ 497 und 498 Abs. 1StPO.
+Die Verarbeitung und Nutzung personenbezogener Daten in einer elektronischen Akte sind danach
+zulässig, soweit dies für die Zwecke des Verfahrens erforderlich ist.
+Personenbezogene Daten dürfen nicht unbegrenzt aufbewahrt werden. Eine Löschung muss somit
+erfolgen, sobald die jeweils einschlägigen Aufbewahrungsfristen abgelaufen sind. In der Regel sind
+diese Aufbewahrungsfristen – unter Beachtung der gesetzlichen Regelungen – in sog. Aufbewahrungsbestimmungen der jeweiligen Landesverwaltungen geregelt und müssen entsprechend beachtet werden.
+
+60
+
+

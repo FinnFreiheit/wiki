@@ -1,0 +1,18 @@
+title: Elektronischer Rechtsverkehr
+description: Wiki zum Elektronischen Rechtsverkehr
+baseurl: "/wiki"
+url: ""
+
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: /:title/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
