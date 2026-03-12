@@ -1,6 +1,6 @@
-# 6. Weiterverarbeitung der von der Justiz übermittelten Nachrichten
+# Weiterverarbeitung der von der Justiz übermittelten Nachrichten
 
-## 6.1 Übernahme in E-Aktensysteme oder Fachverfahren
+## Übernahme in E-Aktensysteme oder Fachverfahren
 
 Soweit keine fachlichen Gründe entgegenstehen, muss der Empfänger die EGVP-Nachricht **nicht als Ganzes** in der E-Akte speichern. Es sind lediglich die **übermittelten Dokumente** zu übernehmen.
 
@@ -20,15 +20,15 @@ Der Prüfvermerk beantwortet folgende Fragen:
 
 Zusätzlich kann die Datei `vhn.xml` (vertrauenswürdiger Herkunftsnachweis) nebst Signaturdatei gespeichert und mit den referenzierten Dokumenten verknüpft werden.
 
-## 6.2 Übernahme in die Papierakte
+## Übernahme in die Papierakte
 
 Sofern Dokumente ausgedruckt und zur Papierakte genommen werden, sind die Umstände des elektronischen Eingangs zu dokumentieren. Hierzu genügt es, den **Prüfvermerk** auszudrucken und abzuheften.
 
-## 6.3 Übermittlung der Dokumente an Dritte
+## Übermittlung der Dokumente an Dritte
 
 Wenn ein Dokument, das auf einem sicheren Übermittlungsweg übermittelt wurde, an einen anderen Beteiligten weitergeleitet werden soll, kann der **Prüfvermerk als Integritäts- und Authentizitätsnachweis** beigefügt werden.
 
-## 6.4 Verteilung innerhalb des eigenen Verantwortungsbereichs
+## Verteilung innerhalb des eigenen Verantwortungsbereichs
 
 Für das automatisierte technische Routing können folgende Elemente aus der `xjustiz_nachricht.xml` genutzt werden:
 
@@ -37,7 +37,7 @@ Für das automatisierte technische Routing können folgende Elemente aus der `xj
 - Element **„Sachgebiet"** in den Grunddaten/Instanzdaten
 - Element **„Ereignis"** im Nachrichtenkopf
 
-## 6.5 Weiterleitung von Nachrichten
+## Weiterleitung von Nachrichten
 
 !!! info "Standard gültig seit 01.12.2023"
     Umsetzungspflicht spätestens bis zum 01.12.2024.
@@ -51,7 +51,7 @@ Die Komfortfunktion „Weiterleitung von Nachrichten" ermöglicht die Weiterleit
 
 Für die Weiterleitung ist **zwingend eine neue EGVP-Nachricht** zu erstellen.
 
-### 6.5.1 Anlagen der Weiterleitungsnachricht
+### Anlagen der Weiterleitungsnachricht
 
 Die neue Nachricht enthält im Attachments-Ordner:
 
@@ -65,7 +65,7 @@ Die neue Nachricht enthält im Attachments-Ordner:
     - Weitere Anhänge dürfen **nicht** ergänzt werden
     - ZIP-Format ist **nicht** zulässig
 
-### 6.5.2 Dateinamen
+### Dateinamen
 
 Die Dateien der ursprünglichen Nachricht müssen um eine eigene UUID ergänzt werden:
 
@@ -79,7 +79,7 @@ Die Dateien der ursprünglichen Nachricht müssen um eine eigene UUID ergänzt w
 
 Die Dateinamen der **Anlagen** der ursprünglichen Nachricht dürfen **nicht** geändert werden.
 
-### 6.5.3 XJustiz-Nachricht für die Weiterleitungsnachricht
+### XJustiz-Nachricht für die Weiterleitungsnachricht
 
 Für die Weiterleitungsnachricht ist eine **neue `xjustiz_nachricht.xml`** zu erstellen mit der Nachricht `nachricht.gds.uebermittlungSchriftgutobjekte.0005005`.
 

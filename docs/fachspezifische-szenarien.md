@@ -1,6 +1,6 @@
-# 8. Fachspezifische Kommunikationsszenarien
+# Fachspezifische Kommunikationsszenarien
 
-## 8.1 Mahnverfahren
+## Mahnverfahren
 
 Im Automatisierten Mahnverfahren wird unterschieden zwischen:
 
@@ -11,13 +11,13 @@ Für **maschinell lesbare Daten (a)** gelten besondere Formate gemäß der „Ko
 
 Für alle **anderen Anträge und Schriftsätze (b)** gelten die allgemeinen Regeln des ERV.
 
-## 8.2 Bußgeldverfahren
+## Bußgeldverfahren
 
 Die Bußgeldbehörden verwenden das **besondere Behördenpostfach (beBPo)**. Für die Übermittlung strukturierter Daten stehen gesonderte XJustiz-Nachrichten zur Verfügung.
 
 Fachliche Rahmenbedingungen sind in der [Anlage (Kapitel 9)](bussgeldverfahren.md) zusammengetragen.
 
-### 8.2.1 Kommunikation von der Bußgeldbehörde zur Justiz
+### Kommunikation von der Bußgeldbehörde zur Justiz
 
 | Nr. | Kommunikationsanlass | XJustiz-Nachricht | Ereignis |
 |-----|---------------------|-------------------|----------|
@@ -32,7 +32,7 @@ Fachliche Rahmenbedingungen sind in der [Anlage (Kapitel 9)](bussgeldverfahren.m
 | BBJ9 | Aktenzeichenmitteilung | `aktenzeichenmitteilung.0500002` | – |
 | BBJ10 | Übermittlung von Dokumenten | `uebermittlungSchriftgutobjekte.0005005` | – |
 
-### 8.2.2 Kommunikation von der Justiz zur Bußgeldbehörde
+### Kommunikation von der Justiz zur Bußgeldbehörde
 
 | Nr. | Kommunikationsanlass | XJustiz-Nachricht | Ereignis |
 |-----|---------------------|-------------------|----------|
@@ -43,13 +43,13 @@ Fachliche Rahmenbedingungen sind in der [Anlage (Kapitel 9)](bussgeldverfahren.m
 | JBB5 | Übermittlung von Dokumenten | `uebermittlungSchriftgutobjekte.0005005` | – |
 | JBB6 | Aktenzeichenmitteilung | `aktenzeichenmitteilung.0500002` | – |
 
-## 8.3 Handels-, Genossenschafts- und Partnerschaftsregistersachen
+## Handels-, Genossenschafts- und Partnerschaftsregistersachen
 
 In diesen Registersachen gelten **nicht die allgemeinen Vorschriften**, insbesondere nicht die ERVV. Die in den einzelnen Bundesländern erlassenen Rechtsverordnungen sind vorrangig zu beachten.
 
 Eine Übersicht der Verordnungen führt die Bundesnotarkammer unter [elrv.info](https://www.elrv.info/elektronischer-rechtsverkehr/uebersicht-verordnungen).
 
-## 8.4 Zentrales Schutzschriftenregister
+## Zentrales Schutzschriftenregister
 
 Eine gültige Einreichung besteht mindestens aus:
 
@@ -68,7 +68,7 @@ Eine gültige Einreichung besteht mindestens aus:
 
 Ein Dokumentenschutz darf **nicht** angebracht werden.
 
-## 8.5 Zentrales Vollstreckungsgericht
+## Zentrales Vollstreckungsgericht
 
 Das Schuldnerverzeichnis (§ 882h ZPO) und das Vermögensverzeichnis (§ 802k ZPO) werden über [vollstreckungsportal.de](https://www.vollstreckungsportal.de) geführt.
 
@@ -77,11 +77,11 @@ Das Schuldnerverzeichnis (§ 882h ZPO) und das Vermögensverzeichnis (§ 802k ZP
 - Jeder Datensatz wird **einzeln** übermittelt
 - Verarbeitung wird mit einer **Quittungsnachricht** bestätigt
 
-## 8.6 Schiffsregistersachen
+## Schiffsregistersachen
 
 In Schiffsregistersachen gelten vorrangig die in den einzelnen Bundesländern gemäß § 94 Abs. 1 S. 2 der Schiffsregisterordnung erlassenen Rechtsverordnungen.
 
-## 8.7 Zwangsvollstreckung
+## Zwangsvollstreckung
 
 Ab XJustiz-Version 3.5.1 steht ein **Fachmodul „Zwangsvollstreckung"** bereit.
 

@@ -1,4 +1,4 @@
-# 4. Übermittlung der Nachrichten
+# Übermittlung der Nachrichten
 
 Der Austausch von Dokumenten, Akten und strukturierten, maschinenlesbaren Datensätzen auf einem sicheren Übermittlungsweg erfolgt über die Infrastruktur des EGVP unter Verwendung des beA, beN, beSt, beBPo, eBO oder des MJP.
 

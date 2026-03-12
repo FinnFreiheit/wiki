@@ -12,8 +12,6 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
-    - navigation.sections
-    - navigation.expand
     - navigation.top
     - search.suggest
     - search.highlight
@@ -41,9 +39,13 @@ nav:
   - Zielsetzung: zielsetzung.md
   - Rechtliche Rahmenbedingungen: rechtliche-rahmenbedingungen.md
   - Das Grundprinzip: grundprinzip.md
-  - Übermittlung der Nachrichten: uebermittlung.md
-  - Inhalt der Nachrichten: inhalt-der-nachrichten.md
-  - Weiterverarbeitung: weiterverarbeitung.md
-  - XJustiz: xjustiz.md
-  - Fachspezifische Szenarien: fachspezifische-szenarien.md
-  - Bußgeldverfahren (Anlage): bussgeldverfahren.md
+  #- Übermittlung der Nachrichten: uebermittlung.md
+  #- Inhalt der Nachrichten: inhalt-der-nachrichten.md
+  #- Weiterverarbeitung: weiterverarbeitung.md
+  - XJustiz: 
+    - XJustiz/index.md
+    - Werkzeuge:
+      - XJustiz/Werkzeuge.md
+      - Funktionsübersicht: XJustiz/Funktionsuebersicht.md
+  #- Fachspezifische Szenarien: fachspezifische-szenarien.md
+  #- Bußgeldverfahren (Anlage): bussgeldverfahren.md

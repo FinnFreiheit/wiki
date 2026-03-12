@@ -1,4 +1,4 @@
-# 3. Das Grundprinzip
+# Das Grundprinzip
 
 Im ERV mit der Justiz werden Schriftgutobjekte (Dokumente und Akten) zwischen
 

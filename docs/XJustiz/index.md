@@ -1,4 +1,4 @@
-# 7. XJustiz
+# XJustiz
 
 Dank der maschinenlesbaren strukturierten Daten im XJustiz-Format können Nachrichteninhalte automatisiert an die richtigen IT-Systeme ausgesteuert oder an den richtigen Bearbeiter weitergeleitet werden. Darüber hinaus ermöglicht XJustiz die automatisierte Übernahme von Daten in die IT-Systeme der Empfänger.
 
@@ -17,7 +17,7 @@ Für die verschiedenen fachlichen Kommunikationsanlässe sind XJustiz-Nachrichte
 
 Die XJustiz-Nachricht trägt immer den Dateinamen **`xjustiz_nachricht.xml`**.
 
-## 7.1 XJustiz-Nachricht „uebermittlungSchriftgutobjekte"
+## XJustiz-Nachricht „uebermittlungSchriftgutobjekte"
 
 Diese Nachricht enthält immer einen **Nachrichtenkopf** und **Schriftgutobjekte**. Optional auch **Grunddaten**.
 
@@ -33,34 +33,34 @@ Diese Nachricht enthält immer einen **Nachrichtenkopf** und **Schriftgutobjekte
 !!! warning "Nicht verwenden"
     Das Element **„nachrichtenuebergreifenderProzess"** findet nur für den justizinternen Datenaustausch Verwendung. Für Nachrichten von Verfahrensbeteiligten an Gerichte/Staatsanwaltschaften darf es nicht genutzt werden.
 
-### 7.1.1 Verknüpfung von Daten
+### Verknüpfung von Daten
 
 In den Grunddaten werden Verfahrensdaten sowie Daten zu den Beteiligten angegeben. In den Schriftgutobjekten können Akten mit Beteiligten verknüpft werden über:
 
 - **Beteiligtennummer** in den Grunddaten
 - Element **„Person"** mit `Type.GDS.Ref.Beteiligtennummer` bei den Akten
 
-### 7.1.2 Zuordnung beim Empfänger
+### Zuordnung beim Empfänger
 
 Für die Zuordnung zum Verfahren werden die jeweiligen **Aktenzeichen im Nachrichtenkopf** übermittelt.
 
-## 7.2 XJustiz-Nachricht „rücklaufendes eEB"
+## XJustiz-Nachricht „rücklaufendes eEB"
 
 Für die Rücksendung des elektronischen Empfangsbekenntnisses wird die ID der empfangenen Nachricht (`eigeneNachrichtenID`) im Element **`fremdeNachrichtenID`** zurück übermittelt.
 
-### 7.2.1 Zustellungsempfänger gibt das eEB ab
+### Zustellungsempfänger gibt das eEB ab
 
 Der Empfänger, der in der XJustiz-Nachricht des hinlaufenden eEBs angegeben ist, wird im rücklaufenden eEB als **Absender** aufgeführt.
 
-### 7.2.2 Abweichender Zustellungsempfänger (bei Behörde o. ä.)
+### Abweichender Zustellungsempfänger (bei Behörde o. ä.)
 
 Wenn der adressierte Zustellungsempfänger von der Person, die das eEB abgibt, abweicht, muss der **abweichende Zustellungsempfänger als Absender** angegeben werden (z. B. wenn eine Behörde statt einer natürlichen Person adressiert ist).
 
-### 7.2.3 Abweichender Zustellungsempfänger als Vertreter
+### Abweichender Zustellungsempfänger als Vertreter
 
 Ein Vertreter kann das eEB abgeben. Zusätzlich muss **„Ja"** im Element **„Zustellungsempfänger abweichend"** angegeben werden.
 
-### 7.2.4 eEB wird nicht abgegeben
+### eEB wird nicht abgegeben
 
 Wenn das eEB nicht abgegeben werden soll, muss ein Grund angegeben werden:
 
@@ -70,7 +70,7 @@ Wenn das eEB nicht abgegeben werden soll, muss ein Grund angegeben werden:
 
 Eine nähere Erläuterung kann optional angegeben werden.
 
-## 7.3 Austausch von Schriftgutobjekten
+## Austausch von Schriftgutobjekten
 
 Die Anhänge werden von den EGVP-Komponenten im Regelfall **alphabetisch sortiert**. Die fachliche Reihenfolge muss daher über die **Schriftgutobjektdaten** in der XJustiz-Nachricht hergestellt werden.
 
@@ -92,29 +92,29 @@ Schriftgutobjekte
     └── Datei(en)
 ```
 
-### 7.3.1 Kennzeichnung des Anschreibens
+### Kennzeichnung des Anschreibens
 
 Das Anschreiben muss entweder im Container „Akte" oder „Dokumente" aufgeführt werden. Zur maschinellen Erkennung wird die UUID im Container **„Anschreiben"** (Element `ref.sgo`) referenziert.
 
 !!! info "Hinweis"
     Vorbereitende Schriftsätze und deren Anlagen (§ 130a Abs. 1 ZPO) werden üblicherweise **nicht** als Anschreiben gekennzeichnet, da es sich nicht um Erläuterungen der Sendung handelt.
 
-### 7.3.2 Reihenfolge der Dokumente
+### Reihenfolge der Dokumente
 
 Element **`nummerImUebergeordnetenContainer`** gibt die Reihenfolge an. Die Nummer beginnt in jedem Container mit **1**. Auslassungen sind nicht zulässig.
 
-### 7.3.3 Zitierung von Akteninhalten
+### Zitierung von Akteninhalten
 
 Sofern Paginierungsinformation auf den Repräsentaten aufgebracht ist, kann diese für die Zitierung genutzt werden. Andernfalls: Datum, Verfasser und Seitenzahl der Einzeldokumente.
 
-### 7.3.4 Kennzeichnung von Scanprodukten
+### Kennzeichnung von Scanprodukten
 
 Im Container „Dokument" stehen zur Verfügung:
 
 - Element **`scanDatum`** – Datum des Scans (kennzeichnet gleichzeitig als Scanprodukt)
 - Element **`ersetzenderScan`** – kennzeichnet ersetzendes Scannen
 
-### 7.3.5 Mehrere Dateien pro Dokument
+### Mehrere Dateien pro Dokument
 
 Für jede Datei muss der **Bestandteiltyp** angegeben werden:
 
@@ -131,7 +131,7 @@ Für jede Datei muss der **Bestandteiltyp** angegeben werden:
 
 Pro Dokument darf nur **ein Original** und **ein Repräsentat** übermittelt werden.
 
-### 7.3.6 Fachlicher Zusammenhang zwischen Dokumenten
+### Fachlicher Zusammenhang zwischen Dokumenten
 
 Über das Element **„Verweis"** kann eine fachliche Verknüpfung hergestellt werden. Verweise gehen stets vom untergeordneten zum übergeordneten Schriftgutobjekt (z. B. Anlage → Schriftsatz).
 
@@ -141,6 +141,6 @@ Verknüpfungsarten:
 - Anlage
 - Einfache Verbindung
 
-### 7.3.7 Erkennung bereits übermittelter Dokumente
+### Erkennung bereits übermittelter Dokumente
 
 Wenn ein Dokument erneut übermittelt wird (z. B. fortgeschriebene Akte), soll es im Element **`Identifikation/ID`** die **gleiche UUID** wie bei der ersten Übermittlung erhalten. Inhaltlich geänderte Dokumente erhalten eine neue ID.

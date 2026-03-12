@@ -1,15 +1,15 @@
-# 9. Anlage: Bußgeldverfahren – Fachliche Rahmenbedingungen
+# Anlage: Bußgeldverfahren – Fachliche Rahmenbedingungen
 
-## 9.1 Beschreibung der Inhalte der XJustiz-Nachrichten (Profilierung)
+## Beschreibung der Inhalte der XJustiz-Nachrichten (Profilierung)
 
 Die Details sind in folgenden Excel-Dateien dokumentiert:
 
 - `2025_01_30_ERV_Profilierung_XJustiz_Nachricht_Uebermittlung_Schriftgutobjekte_und_eEB_XJustiz_3_5.xlsx`
 - `2025_01_30_ERV_Profilierung_XJustiz_Nachrichten_Bussgeldsachen_XJustiz_3_5.xlsx`
 
-## 9.2 Bußgeldverfahren – Fachliche Rahmenbedingungen
+## Bußgeldverfahren – Fachliche Rahmenbedingungen
 
-### 9.2.1 Ausgangslage
+### Ausgangslage
 
 Aktuell ist gemäß § 110a Abs. 1 S. 2 OWiG eine elektronische Aktenführung in Bußgeldverfahren nur zulässig, wenn sie als solche angeordnet bzw. zugelassen wurde (z. B. durch Rechtsverordnung).
 
@@ -36,7 +36,7 @@ Aktuell ist gemäß § 110a Abs. 1 S. 2 OWiG eine elektronische Aktenführung in
 | BBußAktFV | Bundesbußgeldaktenführung (Musterverordnung) |
 | ERVV | Elektronischer Rechtsverkehr |
 
-### 9.2.2 Aktenführung und Erstellung elektronischer Dokumente
+### Aktenführung und Erstellung elektronischer Dokumente
 
 Die Vorgaben richten sich nach den jeweils einschlägigen **Landesverordnungen** bzw. für Bundesbehörden nach der BBußAktFV.
 
@@ -55,7 +55,7 @@ Die Vorgaben richten sich nach den jeweils einschlägigen **Landesverordnungen**
 
 **Videos und Fotos:** Sind Beweismittel und als solche zu asservieren. Sie können zusätzlich in der elektronischen Akte gespeichert werden.
 
-## 9.2.3 Umgang mit elektronischen Eingängen im beBPo
+## Umgang mit elektronischen Eingängen im beBPo
 
 Die elektronische Einreichung durch Dritte richtet sich nach § 110c S. 1 OWiG i.V.m. § 32a StPO i.V.m. §§ 2–5 ERVV.
 
@@ -70,7 +70,7 @@ Die elektronische Einreichung durch Dritte richtet sich nach § 110c S. 1 OWiG i
 - ✅ Signaturdateien
 - ✅ Fachlich relevante Sendungsdaten
 
-### 9.2.3.1 Übermittlungsweg
+### Übermittlungsweg
 
 Zwei zulässige elektronische Einreichungswege:
 
@@ -79,7 +79,7 @@ Zwei zulässige elektronische Einreichungswege:
 
 Seit 01.01.2022: eBO und MJP als weitere sichere Übermittlungswege zugelassen.
 
-### 9.2.3.2 Qualifizierte elektronische Signatur (qeS)
+### Qualifizierte elektronische Signatur (qeS)
 
 Technisch möglich als:
 
@@ -91,7 +91,7 @@ Technisch möglich als:
 
 Eine qeS hat nur dann eigenständige Bedeutung, wenn **kein** sicherer Übermittlungsweg genutzt wurde. Trotzdem muss die Signaturdatei für eine spätere Überprüfung durch die Justiz **zwingend in die eAkte** aufgenommen werden.
 
-### 9.2.3.3 Einfache elektronische Signatur (eS)
+### Einfache elektronische Signatur (eS)
 
 Bei Nutzung eines sicheren Übermittlungsweges ist **keine qeS** erforderlich. Es genügt:
 
@@ -101,11 +101,11 @@ Bei Nutzung eines sicheren Übermittlungsweges ist **keine qeS** erforderlich. E
 !!! warning "beA-Besonderheit"
     Die Versendung muss von der Person erfolgen, auf die das beA angemeldet ist (nur der Rechtsanwalt selbst). Nutzt die Sekretärin das beA, handelt es sich **nicht** um einen sicheren Übermittlungsweg.
 
-### 9.2.3.4 Vollmacht
+### Vollmacht
 
 Gemäß § 51 Abs. 3 OWiG-E genügt zukünftig die **elektronische Kopie** einer Vollmacht. Die Nachreichung im Original kann mit Fristsetzung verlangt werden.
 
-### 9.2.3.5 Relevanter Eingangszeitpunkt
+### Relevanter Eingangszeitpunkt
 
 Maßgeblich ist der Eingang auf dem **OSCI-Intermediär** (§ 110c S. 1 OWiG i.V.m. § 32a Abs. 5 S. 1 StPO).
 
@@ -114,9 +114,9 @@ Maßgeblich ist der Eingang auf dem **OSCI-Intermediär** (§ 110c S. 1 OWiG i.V
 - Datum der Abholung vom Intermediär
 - Zeitpunkt einer etwaigen Signatur
 
-## 9.2.4 Umgang mit Papiereingängen Dritter (Scan-Anforderungen)
+## Umgang mit Papiereingängen Dritter (Scan-Anforderungen)
 
-### 9.2.4.1 Zulässigkeit von Papiereingängen
+### Zulässigkeit von Papiereingängen
 
 - **Nicht anwaltlich vertretene Personen** können weiterhin in Papierform einreichen
 - **Rechtsanwälte und Verteidiger** sollen seit 01.01.2022 elektronisch übermitteln (§ 110c S. 1 OWiG, § 32d S. 1 StPO) – zunächst nur Sollvorschrift
@@ -126,20 +126,20 @@ Für bestimmte Erklärungen (§ 32d S. 2 StPO) besteht eine **Nutzungspflicht** 
 !!! info "Ausnahme"
     Papierform ist zulässig, wenn elektronische Übermittlung aus **technischen Gründen vorübergehend** nicht möglich ist (§ 32d S. 3 StPO).
 
-### 9.2.4.2 Was muss gescannt werden?
+### Was muss gescannt werden?
 
 Grundsätzlich alle Dokumente in Papierform (§ 110c OWiG i.V.m. § 32e Abs. 1 StPO).
 
 **Beweismittel:** Können in die elektronische Form übertragen werden (keine Pflicht). Das Beweismittel ist weiterhin zu asservieren.
 
-### 9.2.4.3 Wie ist zu scannen?
+### Wie ist zu scannen?
 
 - Bildliche und inhaltliche **Übereinstimmung** mit dem Ausgangsdokument sicherstellen
 - **Übertragungsnachweis** erstellen
 - Orientierung an der **TR RESISCAN** des BSI empfohlen
 - Schutzbedarf: maximal **„hoch"**
 
-### 9.2.4.4 Umgang mit Originalen nach dem Scannen
+### Umgang mit Originalen nach dem Scannen
 
 | Situation | Aufbewahrungsdauer |
 |-----------|-------------------|
@@ -147,15 +147,15 @@ Grundsätzlich alle Dokumente in Papierform (§ 110c OWiG i.V.m. § 32e Abs. 1 S
 | Verfahren abgeschlossen | Längstens bis Ablauf des **2. Kalenderjahres** nach Abschluss |
 | Mit qeS-Vermerk | Keine Aufbewahrungspflicht (§ 110c S. 3 OWiG) |
 
-## 9.2.5 Umgang mit Papierdokumenten der Bußgeldbehörde
+## Umgang mit Papierdokumenten der Bußgeldbehörde
 
 Behördeninterne Papierdokumente (z. B. handschriftlicher Aktenvermerk) müssen durch **Scannen** gemäß § 110c S. 1 OWiG i.V.m. § 32e StPO in die elektronische Akte aufgenommen werden.
 
 Beim ersetzenden Scannen durch Bußgeldbehörden ist **keine qeS** erforderlich.
 
-## 9.2.6 Gewährung von Akteneinsicht
+## Gewährung von Akteneinsicht
 
-### 9.2.6.1 Form der Akteneinsicht
+### Form der Akteneinsicht
 
 Möglichkeiten der Akteneinsicht:
 
@@ -164,11 +164,11 @@ Möglichkeiten der Akteneinsicht:
 3. **Einsichtnahme in Diensträumen** (auf besonderen Antrag)
 4. **Ausdruck** oder **Datenträger** (nur bei berechtigtem Interesse)
 
-### 9.2.6.2 Wasserzeichen
+### Wasserzeichen
 
 Der Name der Person, der Akteneinsicht gewährt wird, soll durch technische Maßnahmen **dauerhaft erkennbar** gemacht werden (z. B. digitales Wasserzeichen auf den PDF-Seiten).
 
-### 9.2.6.3 Belehrung
+### Belehrung
 
 Die Person muss darüber belehrt werden, dass:
 
@@ -177,9 +177,9 @@ Die Person muss darüber belehrt werden, dass:
 3. Die Offenbarung nach §§ 94–97, 203, 353d StGB oder § 42 BDSG strafbar sein kann
 4. Gespeicherte Inhalte nach Wegfall des Zwecks zu löschen sind
 
-## 9.2.7 Übertragung an die Justiz
+## Übertragung an die Justiz
 
-### 9.2.7.1 Allgemeines
+### Allgemeines
 
 Zwei Konstellationen:
 
@@ -191,7 +191,7 @@ Zwei Konstellationen:
 !!! info "Strukturierter Datensatz"
     Der Übermittlung **soll** ein strukturierter maschinenlesbarer Datensatz beigefügt werden. Dies ist im Regelfall als **Pflicht** zu verstehen (intendiertes Ermessen).
 
-### 9.2.7.2 Aktenübermittlung an die Justiz
+### Aktenübermittlung an die Justiz
 
 Typische Fälle: § 69 Abs. 3 OWiG (Abgabe nach Einspruch), § 41 Abs. 1 OWiG (Verdacht einer Straftat).
 
@@ -199,24 +199,24 @@ Typische Fälle: § 69 Abs. 3 OWiG (Abgabe nach Einspruch), § 41 Abs. 1 OWiG (V
 - Abgabe ist vollzogen bei Rücksendung eines **Strukturdatensatzes** (§ 3 Abs. 3 S. 1 BußAktÜbV)
 - Ab Übermittlung darf die Akte bei der abgebenden Stelle **nicht mehr fortgeschrieben** werden
 
-### 9.2.7.3 Dokumentenübermittlung an die Justiz
+### Dokumentenübermittlung an die Justiz
 
 Erfasste Fälle: § 96 OWiG (Erzwingungshaft), § 98 OWiG (Vollstreckung Jugendliche), nachträglich eingegangene Schreiben.
 
 - Elektronische Übermittlung, wenn die empfangende Stelle die Akten elektronisch führt
 - Sonst: Übertragung in Papierform vor Übermittlung
 
-### 9.2.7.4 Sonderkonstellation: § 62 OWiG
+### Sonderkonstellation: § 62 OWiG
 
 Antrag auf gerichtliche Entscheidung (z. B. Streitigkeiten zur Akteneinsicht, Kostennote). Je nach Umfang gilt die BußAktÜbV (ganze Akte) oder DokErstÜbV (einzelne Dokumente).
 
-### 9.2.7.5 Vollstreckung durch die Bußgeldbehörden
+### Vollstreckung durch die Bußgeldbehörden
 
 - Vollstreckung über **Gerichtsvollzieher**: Allgemeine ERV-Regeln nach ZPO (§ 753 Abs. 4 ZPO)
 - **Nutzungspflicht** seit 01.01.2022: § 753 Abs. 5 ZPO i.V.m. § 130d ZPO für schriftlich einzureichende Anträge
 - Bei § 754a ZPO: Vollstreckungsauftrag über sicheren Übermittlungsweg oder EGVP mit qeS
 
-## 9.2.8 Datenschutz und Löschfristen
+## Datenschutz und Löschfristen
 
 § 49d OWiG verweist auf die StPO-Regelungen (§ 496 Abs. 1 und 2, §§ 497 und 498 Abs. 1 StPO):
 

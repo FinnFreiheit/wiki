@@ -1,4 +1,4 @@
-# 2. Rechtliche Rahmenbedingungen
+# Rechtliche Rahmenbedingungen
 
 Seit 2001 wurden umfangreiche rechtliche Rahmenbedingungen für den ERV geschaffen. Für die schriftformersetzende elektronische Kommunikation mit der Justiz hat der Bundesgesetzgeber die sogenannten **sicheren Übermittlungswege** vorgesehen.
 

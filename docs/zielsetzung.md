@@ -1,4 +1,4 @@
-# 1. Zielsetzung
+# Zielsetzung
 
 Der elektronische Rechtsverkehr (ERV) ermöglicht den Bürgern, den Behörden, den Organisationen (juristische Personen, Gesellschaften und nichtrechtsfähige Vereinigungen) sowie den professionellen Einreichern wie den Rechtsanwälten, den Notaren, den Steuerberatern und den Gerichtsvollziehern den sicheren und rechtlich wirksamen Austausch elektronischer Dokumente und Akten mit der Justiz. Diese Kommunikationsform ersetzt die bisherige, zumeist papiergebundene Kommunikation, aber auch Tele- und Computerfax.
 
